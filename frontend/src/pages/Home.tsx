@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import HomeServiceCard from '../components/HomeServiceCard'
+import Icon from '../components/Icon'
 
 const Home = () => {
   const services = [
@@ -117,6 +118,16 @@ const Home = () => {
         {/* Content */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="text-center">
+            {/* Brand Icon
+            <div className="flex justify-center mb-8">
+              <Icon 
+                name="main" 
+                alt="Astronyvia Logo" 
+                size="large" 
+                className="drop-shadow-2xl"
+              />
+            </div> */}
+
             {/* Status Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-600/20 border border-blue-500/30 mb-8">
               <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
@@ -167,6 +178,16 @@ const Home = () => {
       <section className="py-16 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
+            {/* Company Icon */}
+            <div className="flex justify-center mb-6">
+              <Icon 
+                name="main" 
+                alt="Astronyvia" 
+                size="medium" 
+                className="opacity-80"
+              />
+            </div>
+            
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Astronyvia</span>
             </h2>
@@ -356,6 +377,34 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Footer Section */}
+      {/* <section className="py-16 bg-gray-900 border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex justify-center mb-8">
+            <Icon 
+              name="main" 
+              alt="Astronyvia" 
+              size="large" 
+              className="opacity-90"
+            />
+          </div>
+          
+          <h3 className="text-2xl font-bold text-white mb-4">
+            <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+              Astronyvia
+            </span>
+          </h3>
+          
+          <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+            FUTURISTIC – Your Partner in IT & Software Solutions
+          </p>
+          
+          <div className="text-gray-500 text-sm">
+            © 2025 Astronyvia. All rights reserved.
+          </div>
+        </div>
+      </section> */}
     </div>
   )
 }
