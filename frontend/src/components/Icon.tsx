@@ -17,6 +17,14 @@ const Icon: FC<CustomIconProps> = ({
   const iconSrc = getIcon(name);
   const iconSize = typeof size === 'string' ? ICON_SIZES[size] : size;
   
+  const handleError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    console.error(`Failed to load icon: ${name} from ${iconSrc}`, e);
+  };
+
+  const handleLoad = () => {
+    console.log(`Successfully loaded icon: ${name} from ${iconSrc}`);
+  };
+  
   return (
     <img
       src={iconSrc}
@@ -27,6 +35,8 @@ const Icon: FC<CustomIconProps> = ({
         height: iconSize,
         objectFit: 'contain'
       }}
+      onError={handleError}
+      onLoad={handleLoad}
     />
   );
 };

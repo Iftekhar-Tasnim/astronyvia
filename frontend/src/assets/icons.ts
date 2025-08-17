@@ -1,17 +1,24 @@
 // Icon paths for easy access throughout the application
+// Using relative paths that work in both development and production
+const getIconPath = (iconName: string) => {
+  // In development, use the icon folder
+  // In production, the icons should be in the public/icon folder
+  return `./icon/${iconName}`;
+};
+
 export const ICONS = {
   // Main brand icon
-  main: '/icon/mainicon.png',
+  main: getIconPath('mainicon.png'),
   
   // Favicon variants
-  favicon: '/icon/favicon.ico',
-  favicon16: '/icon/favicon-16x16.png',
-  favicon32: '/icon/favicon-32x32.png',
+  favicon: getIconPath('favicon.ico'),
+  favicon16: getIconPath('favicon-16x16.png'),
+  favicon32: getIconPath('favicon-32x32.png'),
   
   // Platform-specific icons
-  appleTouch: '/icon/apple-touch-icon.png',
-  android192: '/icon/android-chrome-192x192.png',
-  android512: '/icon/android-chrome-512x512.png',
+  appleTouch: getIconPath('apple-touch-icon.png'),
+  android192: getIconPath('android-chrome-192x192.png'),
+  android512: getIconPath('android-chrome-512x512.png'),
 } as const;
 
 // Icon component props type
