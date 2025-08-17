@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { ICONS, type IconProps, getIcon, ICON_SIZES } from '../assets/icons';
+import { ICONS, getIcon, ICON_SIZES } from '../assets/icons';
 
 interface CustomIconProps {
   name: keyof typeof ICONS;
