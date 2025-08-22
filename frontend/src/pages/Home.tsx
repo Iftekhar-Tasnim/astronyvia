@@ -6,21 +6,51 @@ const Home = () => {
   const services = [
     {
       icon: "💻",
-      title: "Custom Software",
-      description: "Tailored applications for your business",
-      features: ["Enterprise Solutions", "Custom APIs", "Scalable Architecture"]
+      title: "Custom Software Development",
+      description: "Tailored applications designed specifically for your business needs",
+      features: ["Enterprise Solutions", "Custom APIs", "Scalable Architecture", "Legacy System Modernization"]
     },
     {
       icon: "☁️",
-      title: "Cloud Solutions",
-      description: "Secure migration & management",
-      features: ["AWS Migration", "Cost Optimization", "Security Compliance"]
+      title: "Cloud Solutions & Migration",
+      description: "Secure cloud infrastructure and seamless migration services",
+      features: ["AWS/Azure/GCP Migration", "Cost Optimization", "Security Compliance", "24/7 Monitoring"]
     },
     {
       icon: "🔒",
-      title: "Cybersecurity",
-      description: "Comprehensive protection",
-      features: ["Threat Detection", "Incident Response", "Compliance Audits"]
+      title: "Cybersecurity & Compliance",
+      description: "Comprehensive protection for your digital assets",
+      features: ["Threat Detection", "Incident Response", "Compliance Audits", "Security Training"]
+    },
+    {
+      icon: "🌐",
+      title: "Web Development & E-Commerce",
+      description: "Modern, responsive websites and powerful e-commerce platforms",
+      features: ["Progressive Web Apps", "E-commerce Solutions", "SEO Optimization", "Performance Tuning"]
+    },
+    {
+      icon: "📱",
+      title: "Mobile App Development",
+      description: "Native and cross-platform mobile applications",
+      features: ["iOS & Android Apps", "React Native", "Flutter Development", "App Store Optimization"]
+    },
+    {
+      icon: "🤖",
+      title: "AI & Machine Learning",
+      description: "Intelligent solutions to automate and optimize your business",
+      features: ["Predictive Analytics", "Chatbots & NLP", "Computer Vision", "Process Automation"]
+    },
+    {
+      icon: "📊",
+      title: "Data Analytics & BI",
+      description: "Transform your data into actionable business insights",
+      features: ["Data Warehousing", "Business Intelligence", "Real-time Dashboards", "Predictive Modeling"]
+    },
+    {
+      icon: "⚙️",
+      title: "DevOps & CI/CD",
+      description: "Streamline development and deployment processes",
+      features: ["CI/CD Pipelines", "Container Orchestration", "Infrastructure as Code", "Performance Monitoring"]
     }
   ]
 
@@ -209,18 +239,25 @@ const Home = () => {
       </section>
 
       {/* Services Preview Section */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <div className="text-center mb-20">
+            {/* Services Counter Badge */}
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-600/20 border border-blue-500/30 mb-6">
+              <span className="text-blue-300 text-sm font-medium">
+                {services.length} Professional Services Available
+              </span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Services</span>
             </h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              Comprehensive technology solutions tailored to your business needs
+            <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
+              From custom software development to cutting-edge AI solutions, we provide comprehensive technology services that drive business growth and digital transformation.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Service Preview Cards */}
             {services.map((service, index) => (
               <HomeServiceCard
@@ -229,17 +266,18 @@ const Home = () => {
                 title={service.title}
                 description={service.description}
                 features={service.features}
+                index={index}
               />
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-20">
             <Link
               to="/services"
-              className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-blue-500/25"
             >
-              View All Services
-              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              Explore All Services
+              <svg className="ml-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>

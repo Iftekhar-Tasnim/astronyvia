@@ -3,32 +3,61 @@ interface HomeServiceCardProps {
   title: string
   description: string
   features: string[]
+  index?: number
 }
 
-const HomeServiceCard = ({ icon, title, description, features }: HomeServiceCardProps) => {
+const HomeServiceCard = ({ icon, title, description, features, index = 0 }: HomeServiceCardProps) => {
   return (
-    <div className="bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition-all duration-500 transform hover:-translate-y-2 border border-gray-600 hover:border-blue-500/50 group cursor-pointer relative overflow-hidden">
-      {/* Service Icon Container */}
-      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 transition-all duration-500 group-hover:scale-125 group-hover:w-16 group-hover:h-16 relative overflow-hidden">
-        <span className="text-white text-xl transition-all duration-500 group-hover:text-2xl z-10">{icon}</span>
-        
-        {/* Partial Dark Overlay from Top-Right */}
-        <div className="absolute top-0 right-0 w-0 h-0 bg-black/50 rounded-bl-full transition-all duration-500 ease-in-out 
-        group-hover:w-24 group-hover:h-24 group-hover:rounded-bl-2xl"></div>
-      </div>
-
-      {/* Service Content */}
-      <div className="transition-all duration-500 group-hover:pt-2">
-        <h3 className="text-white font-semibold text-lg mb-2 transition-all duration-500 group-hover:translate-y-2 group-hover:text-blue-400">{title}</h3>
-        <p className="text-gray-300 transition-all duration-500 group-hover:translate-y-2">{description}</p>
-        
-        {/* Hidden Details on Hover */}
-        <div className="mt-4 transition-all duration-500 group-hover:opacity-0 group-hover:h-0 group-hover:mt-0 overflow-hidden">
-          {features.map((feature, index) => (
-            <p key={index} className="text-gray-400 text-sm">• {feature}</p>
-          ))}
+    <div 
+      className="group relative bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 cursor-pointer overflow-hidden animate-fade-in-up"
+      style={{
+        animationDelay: `${index * 150}ms`
+      }}
+    >
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      
+      {/* Icon */}
+      <div className="relative z-10 mb-5">
+        <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:shadow-blue-500/25 transition-all duration-300 group-hover:scale-110">
+          <span className="text-white text-2xl">{icon}</span>
         </div>
       </div>
+
+      {/* Content */}
+      <div className="relative z-10">
+        <h3 className="text-white font-bold text-lg mb-3 group-hover:text-blue-400 transition-colors duration-300">
+          {title}
+        </h3>
+        
+        <p className="text-gray-300 text-sm leading-relaxed mb-4">
+          {description}
+        </p>
+        
+        {/* Features */}
+        <div className="space-y-2">
+          {features.slice(0, 2).map((feature, idx) => (
+            <div key={idx} className="flex items-center text-gray-400 text-sm">
+              <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3 flex-shrink-0"></div>
+              <span className="line-clamp-1">{feature}</span>
+            </div>
+          ))}
+          
+          {features.length > 2 && (
+            <div className="pt-2">
+              <span className="text-blue-400 text-sm font-medium">
+                +{features.length - 2} more features
+              </span>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Hover effect line */}
+      <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 group-hover:w-full transition-all duration-500"></div>
+      
+      {/* Corner accent */}
+      <div className="absolute top-3 right-3 w-2 h-2 bg-blue-500/30 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
     </div>
   )
 }
