@@ -22,20 +22,35 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
-              Home
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors relative group focus:outline-none">
+              <span className="relative">
+                Home
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+              </span>
             </Link>
-            <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-              Services
+            <Link to="/services" className="text-gray-300 hover:text-white transition-colors relative group focus:outline-none">
+              <span className="relative">
+                Services
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+              </span>
             </Link>
-            <Link to="/portfolio" className="text-gray-300 hover:text-white transition-colors">
-              Portfolio
+            <Link to="/portfolio" className="text-gray-300 hover:text-white transition-colors relative group focus:outline-none">
+              <span className="relative">
+                Portfolio
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+              </span>
             </Link>
-            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-              About
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors relative group focus:outline-none">
+              <span className="relative">
+                About
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+              </span>
             </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-              Contact
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors relative group focus:outline-none">
+              <span className="relative">
+                Contact
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+              </span>
             </Link>
           </div>
 
@@ -72,38 +87,53 @@ const Navbar = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800/50 rounded-lg mt-2">
               <Link
                 to="/"
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className="text-gray-300 hover:text-white block py-2 text-base font-medium transition-colors relative group focus:outline-none"
                 onClick={() => setIsOpen(false)}
               >
-                Home
+                <span className="relative">
+                  Home
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </span>
               </Link>
               <Link
                 to="/services"
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className="text-gray-300 hover:text-white block py-2 text-base font-medium transition-colors relative group focus:outline-none"
                 onClick={() => setIsOpen(false)}
               >
-                Services
+                <span className="relative">
+                  Services
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </span>
               </Link>
               <Link
                 to="/portfolio"
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className="text-gray-300 hover:text-white block py-2 text-base font-medium transition-colors relative group focus:outline-none"
                 onClick={() => setIsOpen(false)}
               >
-                Portfolio
+                <span className="relative">
+                  Portfolio
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </span>
               </Link>
               <Link
                 to="/about"
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className="text-gray-300 hover:text-white block py-2 text-base font-medium transition-colors relative group focus:outline-none"
                 onClick={() => setIsOpen(false)}
               >
-                About
+                <span className="relative">
+                  About
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </span>
               </Link>
               <Link
                 to="/contact"
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className="text-gray-300 hover:text-white block py-2 text-base font-medium transition-colors relative group focus:outline-none"
                 onClick={() => setIsOpen(false)}
               >
-                Contact
+                <span className="relative">
+                  Contact
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </span>
               </Link>
               <div className="pt-4">
                 <Link

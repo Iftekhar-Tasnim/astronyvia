@@ -3,60 +3,46 @@ import { Link } from 'react-router-dom'
 const Services = () => {
   const services = [
     {
-      icon: "💻",
-      title: "Custom Software Development",
-      description: "Tailored applications designed specifically for your business needs",
-      details: "We develop custom software solutions that perfectly fit your business processes and requirements. From enterprise applications to specialized tools, we create software that grows with your business.",
-      features: ["Enterprise Solutions", "Custom APIs", "Scalable Architecture", "Legacy System Modernization"]
-    },
-    {
-      icon: "☁️",
-      title: "Cloud Solutions & Migration",
-      description: "Secure cloud infrastructure and seamless migration services",
-      details: "Expert cloud migration services and ongoing management. We help you leverage the power of cloud computing while ensuring security, scalability, and cost optimization.",
-      features: ["AWS/Azure/GCP Migration", "Cost Optimization", "Security Compliance", "24/7 Monitoring"]
-    },
-    {
-      icon: "🔒",
-      title: "Cybersecurity & Compliance",
-      description: "Comprehensive protection for your digital assets",
-      details: "Protect your digital assets with our comprehensive cybersecurity solutions. We implement robust security measures, conduct audits, and provide ongoing monitoring and support.",
-      features: ["Threat Detection", "Incident Response", "Compliance Audits", "Security Training"]
-    },
-    {
       icon: "🌐",
-      title: "Web Development & E-Commerce",
-      description: "Modern, responsive websites and powerful e-commerce platforms",
-      details: "Modern, responsive websites and e-commerce platforms built for performance and user experience. We create digital solutions that convert visitors into customers.",
-      features: ["Progressive Web Apps", "E-commerce Solutions", "SEO Optimization", "Performance Tuning"]
+      title: "Website, Web Application & E-Commerce Development",
+      description: "We design and develop fast, responsive, and professional websites, custom web applications, and secure e-commerce platforms with comprehensive maintenance and support.",
+      details: "We create modern, responsive websites and web applications that deliver exceptional user experiences. Our e-commerce solutions include secure payment gateways, product management systems, and customer-friendly interfaces. We also provide ongoing maintenance and support to ensure your digital presence remains current and secure.",
+      features: ["Business Websites", "Web Applications", "E-Commerce Platforms", "Maintenance & Support"]
     },
     {
       icon: "📱",
-      title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications",
-      details: "Native Android applications that provide exceptional user experiences. We build apps that are intuitive, performant, and aligned with your business goals.",
-      features: ["iOS & Android Apps", "React Native", "Flutter Development", "App Store Optimization"]
+      title: "Android Application Development",
+      description: "We create user-friendly, high-performance Android apps tailored to your business needs with attractive UI/UX design and seamless integration.",
+      details: "We specialize in developing native Android applications that provide exceptional user experiences. Our apps feature attractive UI/UX design, seamless integration with business systems, and comprehensive testing to ensure bug-free performance and timely updates.",
+      features: ["Custom Android Apps", "UI/UX Design", "Integration", "Testing & Maintenance"]
     },
     {
-      icon: "🤖",
-      title: "AI & Machine Learning",
-      description: "Intelligent solutions to automate and optimize your business",
-      details: "Leverage the power of artificial intelligence to automate processes, gain insights from data, and create intelligent solutions that give you a competitive edge.",
-      features: ["Predictive Analytics", "Chatbots & NLP", "Computer Vision", "Process Automation"]
+      icon: "💻",
+      title: "Software Development",
+      description: "We provide tailored software solutions to streamline business operations including custom software, desktop applications, and cloud integration.",
+      details: "We develop custom software solutions that perfectly fit your business processes and requirements. From ERP and CRM systems to desktop applications and cloud-integrated solutions, we create software that grows with your business and ensures optimal performance.",
+      features: ["Custom Software", "Desktop Applications", "Cloud Integration", "Testing & Quality Assurance"]
     },
     {
-      icon: "📊",
-      title: "Data Analytics & BI",
-      description: "Transform your data into actionable business insights",
-      details: "Turn your data into a strategic asset with our analytics and business intelligence services. We help you make data-driven decisions that drive growth and efficiency.",
-      features: ["Data Warehousing", "Business Intelligence", "Real-time Dashboards", "Predictive Modeling"]
+      icon: "🏢",
+      title: "Office Setup (Hardware Purchase & Installation)",
+      description: "We set up complete office IT infrastructure including hardware procurement, installation, security solutions, and ongoing IT support.",
+      details: "We provide comprehensive office IT infrastructure setup services, from hardware procurement and installation to security solutions and ongoing support. Our team ensures seamless integration of all systems and provides reliable IT support to keep your business running smoothly.",
+      features: ["Hardware Procurement", "Installation & Configuration", "Security Solutions", "IT Support & Maintenance"]
     },
     {
-      icon: "⚙️",
-      title: "DevOps & CI/CD",
-      description: "Streamline development and deployment processes",
-      details: "Accelerate your development cycles with modern DevOps practices. We implement CI/CD pipelines, container orchestration, and infrastructure automation.",
-      features: ["CI/CD Pipelines", "Container Orchestration", "Infrastructure as Code", "Performance Monitoring"]
+      icon: "🎮",
+      title: "3D Modeling & Game Asset Design",
+      description: "We create high-quality digital assets for games, VR/AR, and marketing including 3D models, game assets, and product visualization.",
+      details: "We specialize in creating high-quality 3D models and digital assets for games, VR/AR applications, and marketing purposes. Our team delivers optimized models for various platforms, complete with animation and rigging, plus realistic product visualization for marketing and presentations.",
+      features: ["3D Models", "Game Assets", "Animation & Rigging", "Product Visualization"]
+    },
+    {
+      icon: "🔍",
+      title: "Search Engine Optimization (SEO)",
+      description: "We help businesses rank higher on search engines and grow visibility through comprehensive on-page, off-page, and technical SEO strategies.",
+      details: "We implement comprehensive SEO strategies to improve your search engine rankings and increase online visibility. Our approach includes on-page optimization, off-page strategies, technical improvements, and detailed analytics reporting to track performance and provide actionable insights.",
+      features: ["On-Page SEO", "Off-Page SEO", "Technical SEO", "Analytics & Reporting"]
     }
   ]
 
@@ -77,7 +63,7 @@ const Services = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            From custom software development to cutting-edge AI solutions, we provide comprehensive technology services that drive business growth and digital transformation.
+            From web development and Android apps to office IT setup and 3D modeling, we provide comprehensive technology services that drive business growth and digital transformation.
           </p>
         </div>
       </section>
@@ -154,7 +140,7 @@ const Services = () => {
             </h2>
             
             <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Let's discuss how our comprehensive technology services can help you achieve your business goals and stay ahead of the competition.
+              Let's discuss how our comprehensive technology services can help you achieve your business goals, from digital presence to operational efficiency.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

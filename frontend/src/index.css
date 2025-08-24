@@ -150,12 +150,6 @@ html {
   animation: slide-out 0.8s ease-in-out forwards;
 }
 
-/* Pause animation on hover */
-.animate-scroll-left:hover,
-.animate-scroll-right:hover {
-  animation-play-state: paused;
-}
-
 /* Service Card Animations */
 @keyframes fadeInUp {
   from {

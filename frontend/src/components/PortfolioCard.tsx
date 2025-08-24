@@ -11,6 +11,7 @@ interface PortfolioCardProps {
     duration: string
     status: string
     features: string[]
+    liveUrl?: string
   }
 }
 
@@ -122,9 +123,20 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
 
         {/* CTA Button */}
         <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-          <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-4 rounded-xl font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]">
-            View Project
-          </button>
+          {project.liveUrl ? (
+            <a 
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-4 rounded-xl font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] inline-block text-center"
+            >
+              View Live Project
+            </a>
+          ) : (
+            <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-4 rounded-xl font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]">
+              View Project
+            </button>
+          )}
         </div>
       </div>
 
