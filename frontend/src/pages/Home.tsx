@@ -111,7 +111,7 @@ const Home = () => {
       role: "IT Director",
       company: "GlobalBank",
       content: "Outstanding cybersecurity implementation. Our systems are now more secure than ever before, and their ongoing support has been invaluable to our operations.",
-      avatar: "👩‍🔒",
+      avatar: "👩",
       rating: 5
     }
   ]
@@ -171,9 +171,21 @@ const Home = () => {
   ]
 
   return (
+
+    
     <div className="min-h-screen">
-      {/* Enhanced Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950 overflow-hidden min-h-screen flex items-center">
+             {/* Under Construction Alert Banner */}
+       <div className="bg-yellow-500/20 border-b border-yellow-500/30 py-3">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="flex items-center justify-center text-yellow-300 text-sm font-medium">
+             <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3 animate-pulse"></span>
+             🚧 Contact Section Under Construction - Please check back soon! 🚧
+           </div>
+         </div>
+       </div>
+
+       {/* Enhanced Hero Section */}
+       <section className="relative bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950 overflow-hidden min-h-screen flex items-center">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-32 h-32 bg-blue-600/10 rounded-full blur-3xl animate-pulse"></div>
@@ -204,11 +216,11 @@ const Home = () => {
             {/* Main Headline */}
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
               <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
-                FUTURISTIC
+                ASTRONYVIA
               </span>
               <br />
               <span className="text-white text-4xl md:text-5xl lg:text-6xl">
-                Technology Solutions
+              Your Partner in IT & Software Solutions
               </span>
             </h1>
 
@@ -245,11 +257,11 @@ const Home = () => {
             <div className="flex flex-wrap justify-center items-center gap-8 text-gray-400 text-sm">
               <div className="flex items-center">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
-                ISO 27001 Certified
+                Client Testimonials & Reviews
               </div>
               <div className="flex items-center">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
-                AWS Advanced Partner
+                Client Success Stories
               </div>
               <div className="flex items-center">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
@@ -396,20 +408,20 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {teamHighlights.map((member, index) => (
               <div key={index} className="text-center group">
-                <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-blue-600/30 transition-all duration-500 hover:-translate-y-2">
-                  <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">{member.icon}</div>
-                  <h3 className="text-white font-semibold text-xl mb-3">{member.name}</h3>
-                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">{member.description}</p>
+                <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-blue-600/30 transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{member.icon}</div>
+                  <h3 className="text-white font-semibold text-lg mb-2">{member.name}</h3>
+                  <p className="text-gray-400 text-sm mb-4 leading-relaxed flex-grow">{member.description}</p>
                   
                   {/* Expertise Tags */}
-                  <div className="flex flex-wrap gap-2 justify-center">
+                  <div className="flex flex-wrap gap-2 justify-center mt-auto">
                     {member.expertise.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
-                        className="px-3 py-1 bg-blue-600/10 border border-blue-600/20 rounded-full text-blue-300 text-xs"
+                        className="px-2 py-1 bg-blue-600/10 border border-blue-600/20 rounded-full text-blue-300 text-xs"
                       >
                         {skill}
                       </span>
@@ -542,6 +554,8 @@ const Home = () => {
               Let's discuss how Astronyvia can help transform your business with cutting-edge technology solutions. 
               Our team is ready to turn your vision into reality.
             </p>
+          
+            
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
                 to="/contact"
