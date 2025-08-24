@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import HomeServiceCard from '../components/HomeServiceCard'
-import Icon from '../components/Icon'
 
 const Home = () => {
   const services = [
