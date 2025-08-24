@@ -96,36 +96,7 @@ const About = () => {
     }
   ]
 
-  const teamMembers = [
-    {
-      name: "Development Team",
-      role: "Expert Developers & Engineers",
-      description: "Senior engineers with 8+ years of experience in modern technologies",
-      icon: "👨‍💻",
-      count: "15+"
-    },
-    {
-      name: "Design Team",
-      role: "Creative Designers & UX Experts",
-      description: "Passionate designers creating intuitive and beautiful user experiences",
-      icon: "🎨",
-      count: "8+"
-    },
-    {
-      name: "Strategy Team",
-      role: "Business Analysts & Consultants",
-      description: "Strategic thinkers helping businesses align technology with goals",
-      icon: "📊",
-      count: "6+"
-    },
-    {
-      name: "DevOps Team",
-      role: "Infrastructure & Operations",
-      description: "Cloud architects and DevOps engineers ensuring smooth deployments",
-      icon: "⚙️",
-      count: "10+"
-    }
-  ]
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 py-20">
@@ -320,32 +291,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Team Section */}
-        <div className="bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10 border border-blue-500/20 rounded-3xl p-16 backdrop-blur-sm mb-20">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Meet Our <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Expert Team</span>
-            </h2>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-              Our diverse team of experienced professionals brings together expertise in software development, 
-              cloud architecture, cybersecurity, and digital innovation. We're passionate about technology 
-              and committed to delivering exceptional results for our clients.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white text-3xl">{member.icon}</span>
-                </div>
-                <div className="text-2xl font-bold text-white mb-2">{member.count}</div>
-                <h3 className="text-white text-lg font-semibold mb-2">{member.name}</h3>
-                <p className="text-blue-400 text-sm mb-3">{member.role}</p>
-                <p className="text-gray-300 text-sm leading-relaxed">{member.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+
 
         {/* CTA Section */}
         <div className="text-center">

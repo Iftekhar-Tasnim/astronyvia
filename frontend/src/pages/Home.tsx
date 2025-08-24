@@ -41,106 +41,56 @@ const Home = () => {
     }
   ]
 
-  const techIcons = [
-    { name: "React", icon: "/icon/icons2/react-svgrepo-com.svg", color: "#61DAFB", type: "svg" },
-    { name: "Next.js", icon: "/icon/icons/imgi_32_nextActive.png", color: "#000000", type: "image" },
-    { name: "TypeScript", icon: "/icon/icons/imgi_29_typescript.svg", color: "#3178C6", type: "svg" },
-    { name: "JavaScript", icon: "/icon/icons/imgi_14_javascript.svg", color: "#F7DF1E", type: "svg" },
-    { name: "Node.js", icon: "/icon/icons/imgi_20_nest.svg", color: "#339933", type: "svg" },
-    { name: "PostgreSQL", icon: "/icon/icons/imgi_23_pg.svg", color: "#336791", type: "svg" },
-    { name: "MySQL", icon: "/icon/icons2/mysql-logo-svgrepo-com.svg", color: "#4479A1", type: "svg" },
-    { name: "MongoDB", icon: "/icon/icons2/mongo-svgrepo-com.svg", color: "#47A248", type: "svg" },
-    { name: "Python", icon: "/icon/icons2/python-svgrepo-com.svg", color: "#3776AB", type: "svg" },
-    { name: "Java", icon: "/icon/icons2/java-svgrepo-com.svg", color: "#ED8B00", type: "svg" },
-    { name: "Tailwind CSS", icon: "/icon/icons2/tailwindcss-icon-svgrepo-com.svg", color: "#06B6D4", type: "svg" },
-    { name: "Adobe XD", icon: "/icon/icons2/adobe-xd-svgrepo-com.svg", color: "#FF61F6", type: "svg" },
-    { name: "Flutter", icon: "/icon/icons2/flutter-svgrepo-com.svg", color: "#02569B", type: "svg" },
-    { name: "Vite", icon: "/icon/icons2/vitejs-svgrepo-com.svg", color: "#646CFF", type: "svg" },
-    { name: "NPM", icon: "/icon/icons/imgi_22_npm.svg", color: "#CB3837", type: "svg" },
-    { name: "Figma", icon: "/icon/icons/imgi_9_figma.svg", color: "#F24E1E", type: "svg" },
-    { name: "GitHub", icon: "/icon/icons/imgi_11_github.svg", color: "#181717", type: "svg" },
-    { name: "AWS", icon: "AWS", color: "#FF9900", type: "text" },
-    { name: "Docker", icon: "Docker", color: "#2496ED", type: "text" },
-    { name: "Kubernetes", icon: "K8s", color: "#326CE5", type: "text" },
-    { name: "Redis", icon: "Redis", color: "#DC382D", type: "text" },
-    { name: "Vue.js", icon: "Vue", color: "#4FC08D", type: "text" },
-    { name: "Angular", icon: "Angular", color: "#DD0031", type: "text" },
-    { name: "Laravel", icon: "Laravel", color: "#FF2D20", type: "text" },
-    { name: "Django", icon: "Django", color: "#092E20", type: "text" },
-    { name: "React Native", icon: "RN", color: "#61DAFB", type: "text" },
-    { name: "Firebase", icon: "Firebase", color: "#FFCA28", type: "text" },
-    { name: "GraphQL", icon: "GraphQL", color: "#E10098", type: "text" },
-    { name: "Elasticsearch", icon: "ES", color: "#FED10A", type: "text" },
-    { name: "Terraform", icon: "Terraform", color: "#7B42BC", type: "text" },
-    { name: "Jenkins", icon: "Jenkins", color: "#D24939", type: "text" },
-    { name: "Azure", icon: "Azure", color: "#0089D6", type: "text" },
-    { name: "GCP", icon: "GCP", color: "#4285F4", type: "text" },
-    { name: "Sass", icon: "Sass", color: "#CC6699", type: "text" },
-    { name: "Webpack", icon: "Webpack", color: "#8DD6F9", type: "text" },
-    { name: "Jest", icon: "Jest", color: "#C21325", type: "text" },
-    { name: "Cypress", icon: "Cypress", color: "#17202C", type: "text" }
-  ]
+     const techIcons = [
+     { name: "React", icon: "/icon/icons/imgi_44_reactActive.png", color: "#61DAFB", type: "image" },
+     { name: "Next.js", icon: "/icon/icons/imgi_32_nextActive.png", color: "#000000", type: "image" },
+     { name: "TypeScript", icon: "/icon/icons/imgi_29_typescript.svg", color: "#3178C6", type: "svg" },
+     { name: "JavaScript", icon: "/icon/icons/imgi_14_javascript.svg", color: "#F7DF1E", type: "svg" },
+     { name: "Node.js", icon: "/icon/icons/imgi_20_nest.svg", color: "#339933", type: "svg" },
+     { name: "PostgreSQL", icon: "/icon/icons/imgi_23_pg.svg", color: "#336791", type: "svg" },
+     { name: "MySQL", icon: "/icon/icons2/mysql-logo-svgrepo-com.svg", color: "#4479A1", type: "svg" },
+     { name: "MongoDB", icon: "/icon/icons2/mongo-svgrepo-com.svg", color: "#47A248", type: "svg" },
+     { name: "Python", icon: "/icon/icons2/python-svgrepo-com.svg", color: "#3776AB", type: "svg" },
+     { name: "Java", icon: "/icon/icons2/java-svgrepo-com.svg", color: "#ED8B00", type: "svg" },
+     { name: "Tailwind CSS", icon: "/icon/icons2/tailwindcss-icon-svgrepo-com.svg", color: "#06B6D4", type: "svg" },
+     { name: "Adobe XD", icon: "/icon/icons2/adobe-xd-svgrepo-com.svg", color: "#FF61F6", type: "svg" },
+     { name: "Flutter", icon: "/icon/icons2/flutter-svgrepo-com.svg", color: "#02569B", type: "svg" },
+     { name: "Vite", icon: "/icon/icons2/vitejs-svgrepo-com.svg", color: "#646CFF", type: "svg" },
+     { name: "NPM", icon: "/icon/icons/imgi_22_npm.svg", color: "#CB3837", type: "svg" },
+     { name: "Figma", icon: "/icon/icons/imgi_9_figma.svg", color: "#F24E1E", type: "svg" },
+     { name: "GitHub", icon: "/icon/icons/imgi_11_github.svg", color: "#181717", type: "svg" },
+     { name: "AWS", icon: "AWS", color: "#FF9900", type: "text" },
+     { name: "Docker", icon: "Docker", color: "#2496ED", type: "text" },
+     { name: "Kubernetes", icon: "K8s", color: "#326CE5", type: "text" },
+     { name: "Redis", icon: "Redis", color: "#DC382D", type: "text" },
+     { name: "Vue.js", icon: "Vue", color: "#4FC08D", type: "text" },
+     { name: "Angular", icon: "Angular", color: "#DD0031", type: "text" },
+     { name: "Laravel", icon: "Laravel", color: "#FF2D20", type: "text" },
+     { name: "Django", icon: "Django", color: "#092E20", type: "text" },
+     { name: "React Native", icon: "RN", color: "#61DAFB", type: "text" },
+     { name: "Firebase", icon: "Firebase", color: "#FFCA28", type: "text" },
+     { name: "GraphQL", icon: "GraphQL", color: "#E10098", type: "text" },
+     { name: "Elasticsearch", icon: "ES", color: "#FED10A", type: "text" },
+     { name: "Terraform", icon: "Terraform", color: "#7B42BC", type: "text" },
+     { name: "Jenkins", icon: "Jenkins", color: "#D24939", type: "text" },
+     { name: "Azure", icon: "Azure", color: "#0089D6", type: "text" },
+     { name: "GCP", icon: "GCP", color: "#4285F4", type: "text" },
+     { name: "Sass", icon: "Sass", color: "#CC6699", type: "text" },
+     { name: "Webpack", icon: "Webpack", color: "#8DD6F9", type: "text" },
+     { name: "Jest", icon: "Jest", color: "#C21325", type: "text" },
+     { name: "Cypress", icon: "Cypress", color: "#17202C", type: "text" }
+   ]
 
-  const stats = [
-    { number: "150+", label: "Projects Completed", icon: "🚀", description: "Successfully delivered across various industries" },
-    { number: "50+", label: "Happy Clients", icon: "😊", description: "Trusted by businesses worldwide" },
-    { number: "5+", label: "Years Experience", icon: "⭐", description: "Deep expertise in modern technologies" },
-    { number: "24/7", label: "Support Available", icon: "🔄", description: "Round-the-clock technical assistance" }
-  ]
+     const stats = [
+     { number: "150+", label: "Projects Completed", icon: "/icon/icons2/rocket-svgrepo-com.svg", description: "Successfully delivered across various industries" },
+     { number: "50+", label: "Happy Clients", icon: "/icon/icons2/users-group-svgrepo-com.svg", description: "Trusted by businesses worldwide" },
+     { number: "5+", label: "Years Experience", icon: "/icon/icons2/star-svgrepo-com.svg", description: "Deep expertise in modern technologies" },
+     { number: "24/7", label: "Support Available", icon: "/icon/icons2/support-svgrepo-com.svg", description: "Round-the-clock technical assistance" }
+   ]
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CTO, TechCorp",
-      company: "TechCorp Inc.",
-      content: "Astronyvia transformed our digital infrastructure completely. Their cloud migration expertise saved us 40% in costs while improving our system performance by 300%.",
-      avatar: "👩‍💼",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "Founder & CEO",
-      company: "StartupXYZ",
-      content: "The custom software solution they built for us exceeded all expectations. Their team's attention to detail and commitment to quality is unmatched in the industry.",
-      avatar: "👨‍💻",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "IT Director",
-      company: "GlobalBank",
-      content: "Outstanding cybersecurity implementation. Our systems are now more secure than ever before, and their ongoing support has been invaluable to our operations.",
-      avatar: "👩",
-      rating: 5
-    }
-  ]
 
-  const teamHighlights = [
-    {
-      name: "Expert Developers",
-      description: "Senior engineers with 8+ years experience in modern technologies",
-      icon: "👨‍💻",
-      expertise: ["Full-Stack Development", "Cloud Architecture", "Performance Optimization"]
-    },
-    {
-      name: "Cloud Architects",
-      description: "AWS, Azure, and GCP certified professionals",
-      icon: "☁️",
-      expertise: ["Cloud Migration", "Cost Optimization", "Security Compliance"]
-    },
-    {
-      name: "Security Specialists",
-      description: "Cybersecurity experts with industry certifications",
-      icon: "🔒",
-      expertise: ["Threat Detection", "Incident Response", "Compliance Audits"]
-    },
-    {
-      name: "DevOps Engineers",
-      description: "CI/CD and automation specialists",
-      icon: "⚙️",
-      expertise: ["Pipeline Automation", "Container Orchestration", "Infrastructure as Code"]
-    }
-  ]
+
+
 
   const processSteps = [
     {
@@ -289,18 +239,24 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-blue-600/50 transition-all duration-500 hover:-translate-y-2">
-                  <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">{stat.icon}</div>
-                  <div className="text-4xl font-bold text-white mb-3">{stat.number}</div>
-                  <div className="text-blue-300 font-semibold mb-2">{stat.label}</div>
-                  <div className="text-gray-300 text-sm">{stat.description}</div>
-                </div>
-              </div>
-            ))}
-          </div>
+                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+             {stats.map((stat, index) => (
+               <div key={index} className="text-center group">
+                 <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-blue-600/50 transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+                   <div className="mb-4 group-hover:scale-110 transition-transform duration-300">
+                     <img 
+                       src={stat.icon} 
+                       alt={stat.label}
+                       className="w-16 h-16 mx-auto object-contain"
+                     />
+                   </div>
+                   <div className="text-4xl font-bold text-white mb-3">{stat.number}</div>
+                   <div className="text-blue-300 font-semibold mb-2">{stat.label}</div>
+                   <div className="text-gray-300 text-sm flex-grow">{stat.description}</div>
+                 </div>
+               </div>
+             ))}
+           </div>
         </div>
       </section>
 
@@ -389,92 +345,9 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Enhanced Team Highlights Section */}
-      <section className="py-24 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-600/10 border border-blue-600/20 rounded-full text-blue-300 text-sm font-medium mb-6">
-              <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
-              Our Team
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Meet Our <span className="bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">Expert Team</span>
-            </h2>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-              Our diverse team of experienced professionals brings together expertise in software development, 
-              cloud architecture, cybersecurity, and digital innovation.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {teamHighlights.map((member, index) => (
-              <div key={index} className="text-center group">
-                <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-blue-600/30 transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{member.icon}</div>
-                  <h3 className="text-white font-semibold text-lg mb-2">{member.name}</h3>
-                  <p className="text-gray-400 text-sm mb-4 leading-relaxed flex-grow">{member.description}</p>
-                  
-                  {/* Expertise Tags */}
-                  <div className="flex flex-wrap gap-2 justify-center mt-auto">
-                    {member.expertise.map((skill, skillIndex) => (
-                      <span
-                        key={skillIndex}
-                        className="px-2 py-1 bg-blue-600/10 border border-blue-600/20 rounded-full text-blue-300 text-xs"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Enhanced Testimonials Section */}
-      <section className="py-24 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-600/10 border border-blue-600/20 rounded-full text-blue-300 text-sm font-medium mb-6">
-              <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
-              Client Success
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              What Our <span className="bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">Clients Say</span>
-            </h2>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-              Real feedback from satisfied customers who have experienced the Astronyvia difference firsthand.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-blue-600/30 transition-all duration-500 hover:-translate-y-2 group">
-                {/* Rating Stars */}
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-500 text-lg">⭐</span>
-                  ))}
-                </div>
-                
-                <p className="text-gray-300 italic text-lg mb-6 leading-relaxed">"{testimonial.content}"</p>
-                
-                <div className="flex items-center">
-                  <div className="text-4xl mr-4">{testimonial.avatar}</div>
-                  <div>
-                    <div className="text-white font-semibold text-lg">{testimonial.name}</div>
-                    <div className="text-blue-400 text-sm font-medium">{testimonial.role}</div>
-                    <div className="text-gray-400 text-sm">{testimonial.company}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Enhanced Tech Icons Scrolling Section */}
       <section className="py-20 bg-gray-900 overflow-hidden">
