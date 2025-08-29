@@ -151,6 +151,15 @@ const Portfolio = () => {
     return matchesCategory && matchesSearch
   })
 
+  // Ensure specific projects are displayed last
+  const deprioritizedTitles = new Set(["ChatterPoint", "ServiceTrek", "CineVerse"])
+  const sortedProjects = [...filteredProjects].sort((a, b) => {
+    const aIsDeprioritized = deprioritizedTitles.has(a.title)
+    const bIsDeprioritized = deprioritizedTitles.has(b.title)
+    if (aIsDeprioritized === bIsDeprioritized) return 0
+    return aIsDeprioritized ? 1 : -1
+  })
+
   return (
     <div className="min-h-screen bg-gray-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -203,7 +212,7 @@ const Portfolio = () => {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
+          {sortedProjects.map((project) => (
             <PortfolioCard key={project.id} project={project} />
           ))}
         </div>
