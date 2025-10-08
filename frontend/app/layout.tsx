@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "Astronyvia - Building the Future of Intelligence",
   description:
     "Next-generation tech and AI company specializing in artificial intelligence, cloud platforms, and innovative web solutions.",
-  generator: "v0.app",
+  generator: "Astronyvia",
 }
 
 export default function RootLayout({
