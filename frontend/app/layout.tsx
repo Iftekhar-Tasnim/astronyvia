@@ -28,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`font-sans ${spaceGrotesk.variable} ${GeistMono.variable} antialiased`}>
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <body className={`font-sans ${spaceGrotesk.variable} ${GeistMono.variable} antialiased`} suppressHydrationWarning>
         <Suspense fallback={<div>Loading...</div>}>
           <Navbar />
           <PageTransition>{children}</PageTransition>

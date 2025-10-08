@@ -58,7 +58,7 @@ export function Navbar() {
               className="rounded-xl"
               priority
             />
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-xl font-bold tracking-tight text-transparent">
+            <span className="text-xl font-bold tracking-tight text-foreground">
               Astronyvia
             </span>
           </Link>
@@ -75,7 +75,7 @@ export function Navbar() {
               >
                 {link.label}
                 {pathname === link.href && (
-                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full animate-in fade-in slide-in-from-left-2 duration-300" />
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full animate-in fade-in slide-in-from-left-2 duration-300" />
                 )}
               </Link>
             ))}
@@ -83,7 +83,7 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center gap-3">
             <ThemeToggle />
-            <Button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600">
+            <Button>
               Get Started
             </Button>
           </div>
@@ -113,7 +113,7 @@ export function Navbar() {
             ))}
             <div className="flex items-center gap-3 pt-2">
               <ThemeToggle />
-              <Button className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600">
+              <Button className="flex-1">
                 Get Started
               </Button>
             </div>

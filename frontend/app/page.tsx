@@ -48,7 +48,7 @@ export default function HomePage() {
       content:
         "Astronyvia transformed our infrastructure with their cloud solutions. The team's expertise in AI and scalability is unmatched.",
       rating: 5,
-      avatar: "/team-ceo-professional-portrait.jpg",
+      avatar: "https://images.pexels.com/photos/7691739/pexels-photo-7691739.jpeg",
     },
     {
       name: "Michael Rodriguez",
@@ -56,14 +56,14 @@ export default function HomePage() {
       content:
         "Working with Astronyvia was a game-changer. They delivered our MVP in record time with exceptional quality.",
       rating: 5,
-      avatar: "/team-cto-professional-portrait.jpg",
+      avatar: "https://images.pexels.com/photos/671800/pexels-photo-671800.jpeg",
     },
     {
       name: "Emily Watson",
       role: "Product Lead, InnovateCo",
       content: "The AI solutions they built for us increased our efficiency by 300%. Truly next-generation technology.",
       rating: 5,
-      avatar: "/team-design-lead-portrait.jpg",
+      avatar: "https://images.pexels.com/photos/837306/pexels-photo-837306.jpeg",
     },
   ]
 
@@ -376,35 +376,40 @@ export default function HomePage() {
               {
                 title: "AI E-Commerce Platform",
                 category: "AI & Machine Learning",
-                image: "/futuristic-ai-ecommerce-dashboard.jpg",
+                image: "/lyva.png",
+                url: "https://lyvaa.com/",
               },
               {
                 title: "Cloud Infrastructure",
                 category: "Cloud Solutions",
-                image: "/cloud-infrastructure-network-visualization.jpg",
+                image: "/beingsmile.png",
+                url: "https://beingsmile.org/",
               },
               {
                 title: "FinTech Dashboard",
                 category: "Web Development",
-                image: "/modern-financial-dashboard-dark-theme.jpg",
+                image: "/tusqa.png",
+                url: "https://tusqawellbeing.com/",
               },
             ].map((project, index) => (
               <AnimatedSection key={project.title} delay={index * 100}>
-                <Card className="glass group relative h-full overflow-hidden border-border/50 transition-all duration-300 hover:scale-105 hover:border-primary/50">
-                  <div className="relative h-48 overflow-hidden">
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
-                  </div>
-                  <div className="p-6">
-                    <div className="mb-2 text-sm text-primary">{project.category}</div>
-                    <h3 className="text-xl font-semibold">{project.title}</h3>
-                  </div>
-                </Card>
+                <Link href={(project as any).url} target="_blank" rel="noopener noreferrer">
+                  <Card className="glass group relative h-full overflow-hidden border-border/50 transition-all duration-300 hover:scale-105 hover:border-primary/50">
+                    <div className="relative h-48 overflow-hidden">
+                      <Image
+                        src={project.image || "/placeholder.svg"}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
+                    </div>
+                    <div className="p-6">
+                      <div className="mb-2 text-sm text-primary">{project.category}</div>
+                      <h3 className="text-xl font-semibold">{project.title}</h3>
+                    </div>
+                  </Card>
+                </Link>
               </AnimatedSection>
             ))}
           </div>

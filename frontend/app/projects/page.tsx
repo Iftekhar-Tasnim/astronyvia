@@ -18,7 +18,7 @@ export default function ProjectsPage() {
       title: "ChatterPoint",
       category: "Web Apps",
       description: "Real-time chat and collaboration platform.",
-      image: "/modern-financial-dashboard-dark-theme.jpg",
+      image: "/chatpoint.png",
       tags: ["React", "Firebase"],
       gradient: "from-cyan-500 to-blue-500",
       url: "https://chatterpoint.web.app/",
@@ -27,7 +27,7 @@ export default function ProjectsPage() {
       title: "ServiceTrek",
       category: "Web Apps",
       description: "Service management and booking application.",
-      image: "/cloud-infrastructure-network-visualization.jpg",
+      image: "/servicetrek.png",
       tags: ["Next.js", "Stripe"],
       gradient: "from-purple-500 to-pink-500",
       url: "https://servicetrek-ff5f1.web.app/",
@@ -36,7 +36,7 @@ export default function ProjectsPage() {
       title: "CineVerse",
       category: "Web Apps",
       description: "Movie discovery and tracking experience.",
-      image: "/futuristic-ai-ecommerce-dashboard.jpg",
+      image: "/cineverse.png",
       tags: ["React", "TMDB API"],
       gradient: "from-pink-500 to-rose-500",
       url: "https://cineverse-dffdc.web.app/",
@@ -54,7 +54,7 @@ export default function ProjectsPage() {
       title: "Lyvaa",
       category: "Web Apps",
       description: "E-commerce and lifestyle brand site.",
-      image: "/health-tracking-app.png",
+      image: "/lyva.png",
       tags: ["Commerce", "Web"],
       gradient: "from-blue-500 to-cyan-500",
       url: "https://lyvaa.com",
@@ -72,7 +72,7 @@ export default function ProjectsPage() {
       title: "Being Smile",
       category: "Web Apps",
       description: "Nonprofit organization platform.",
-      image: "/modern-financial-dashboard-dark-theme.jpg",
+      image: "/beingsmile.png",
       tags: ["NGO", "Web"],
       gradient: "from-cyan-500 to-blue-500",
       url: "https://beingsmile.org",
@@ -81,7 +81,7 @@ export default function ProjectsPage() {
       title: "Tusqa Wellbeing",
       category: "Web Apps",
       description: "Health and wellbeing services.",
-      image: "/cloud-infrastructure-network-visualization.jpg",
+      image: "/tusqa.png",
       tags: ["Health", "Web"],
       gradient: "from-purple-500 to-pink-500",
       url: "https://tusqawellbeing.com",
@@ -136,14 +136,14 @@ export default function ProjectsPage() {
       <section className="relative px-6 pb-12 md:px-8 lg:px-12">
         <div className="container mx-auto max-w-7xl">
           <AnimatedSection>
-            <div className="glass neon-border-cyan flex flex-wrap justify-center gap-3 rounded-full p-3">
+            <div className="flex flex-wrap justify-center gap-3 rounded-full border p-3">
               {filters.map((filter) => (
                 <Button
                   key={filter}
                   variant={activeFilter === filter ? "default" : "ghost"}
                   size="sm"
                   onClick={() => setActiveFilter(filter)}
-                  className={activeFilter === filter ? "glow-cyan" : ""}
+                  className=""
                 >
                   {filter}
                 </Button>
@@ -159,7 +159,7 @@ export default function ProjectsPage() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {filteredProjects.map((project, index) => (
               <AnimatedSection key={project.title} delay={index * 100}>
-                <Card className="glass group relative h-full overflow-hidden border-border/50 transition-all duration-300 hover:scale-[1.02]">
+                <Card className="group relative h-full overflow-hidden border transition-all duration-300 hover:scale-[1.02]">
                   {/* Project Image */}
                   <div className="relative h-64 overflow-hidden">
                     <img
@@ -172,7 +172,7 @@ export default function ProjectsPage() {
                     {/* Hover Overlay */
                     // Link overlays to the project URL
                     }
-                    <div className="absolute inset-0 flex items-center justify-center bg-background/80 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
+                    <div className="absolute inset-0 flex items-center justify-center bg-background/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                       <div className="text-center">
                         <p className="mb-4 px-4 text-sm text-muted-foreground">{project.description}</p>
                         <a href={(project as any).url} target="_blank" rel="noopener noreferrer">
@@ -188,7 +188,7 @@ export default function ProjectsPage() {
                   {/* Project Info */}
                   <div className="p-6">
                     <div className="mb-3 flex items-center justify-between">
-                      <Badge variant="secondary" className={`bg-gradient-to-r ${project.gradient} text-white`}>
+                      <Badge variant="secondary" className="">
                         {project.category}
                       </Badge>
                     </div>
@@ -216,7 +216,7 @@ export default function ProjectsPage() {
       <section className="relative px-6 py-24 md:px-8 lg:px-12">
         <div className="container mx-auto max-w-7xl">
           <AnimatedSection>
-            <div className="glass neon-border-purple rounded-3xl p-12">
+            <div className="rounded-3xl border p-12">
               <div className="grid gap-8 md:grid-cols-4">
                 {[
                   { value: "500+", label: "Projects Completed" },

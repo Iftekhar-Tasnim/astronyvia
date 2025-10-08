@@ -32,9 +32,7 @@ export function Footer() {
           {/* Brand & Newsletter */}
           <div className="lg:col-span-2">
             <Link href="/" className="mb-4 flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-                <span className="text-lg font-bold text-primary-foreground">A</span>
-              </div>
+              <img src="/astronyvia.png" alt="Astronyvia logo" className="h-8 w-8 rounded-lg object-cover" />
               <span className="text-xl font-bold tracking-tight">Astronyvia</span>
             </Link>
             <p className="mb-6 text-sm text-muted-foreground">
