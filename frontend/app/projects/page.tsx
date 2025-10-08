@@ -15,52 +15,94 @@ export default function ProjectsPage() {
 
   const projects = [
     {
-      title: "Neural Commerce Platform",
-      category: "AI & ML",
-      description: "AI-powered e-commerce platform with personalized recommendations and predictive analytics.",
-      image: "/futuristic-ai-ecommerce-dashboard.jpg",
-      tags: ["TensorFlow", "React", "AWS"],
-      gradient: "from-cyan-500 to-blue-500",
-    },
-    {
-      title: "CloudScale Infrastructure",
-      category: "Cloud",
-      description: "Scalable Kubernetes infrastructure serving 10M+ users with 99.99% uptime.",
-      image: "/cloud-infrastructure-network-visualization.jpg",
-      tags: ["Kubernetes", "Docker", "Terraform"],
-      gradient: "from-purple-500 to-pink-500",
-    },
-    {
-      title: "FinTech Dashboard",
+      title: "ChatterPoint",
       category: "Web Apps",
-      description: "Real-time financial analytics platform with advanced data visualization.",
+      description: "Real-time chat and collaboration platform.",
       image: "/modern-financial-dashboard-dark-theme.jpg",
-      tags: ["Next.js", "TypeScript", "D3.js"],
+      tags: ["React", "Firebase"],
+      gradient: "from-cyan-500 to-blue-500",
+      url: "https://chatterpoint.web.app/",
+    },
+    {
+      title: "ServiceTrek",
+      category: "Web Apps",
+      description: "Service management and booking application.",
+      image: "/cloud-infrastructure-network-visualization.jpg",
+      tags: ["Next.js", "Stripe"],
+      gradient: "from-purple-500 to-pink-500",
+      url: "https://servicetrek-ff5f1.web.app/",
+    },
+    {
+      title: "CineVerse",
+      category: "Web Apps",
+      description: "Movie discovery and tracking experience.",
+      image: "/futuristic-ai-ecommerce-dashboard.jpg",
+      tags: ["React", "TMDB API"],
       gradient: "from-pink-500 to-rose-500",
+      url: "https://cineverse-dffdc.web.app/",
     },
     {
-      title: "HealthTrack Mobile",
-      category: "Mobile",
-      description: "Cross-platform health monitoring app with AI-driven insights.",
-      image: "/health-tracking-app.png",
-      tags: ["React Native", "Firebase", "ML Kit"],
-      gradient: "from-blue-500 to-cyan-500",
-    },
-    {
-      title: "Brand Identity System",
-      category: "Design",
-      description: "Complete design system and brand guidelines for a global tech company.",
+      title: "UIXpertise",
+      category: "Web Apps",
+      description: "UX/UI agency site.",
       image: "/modern-design-system-components.jpg",
-      tags: ["Figma", "Design Tokens", "Storybook"],
+      tags: ["Design", "Web"],
       gradient: "from-violet-500 to-purple-500",
+      url: "https://uixpertise.com",
     },
     {
-      title: "Smart City IoT",
-      category: "AI & ML",
-      description: "IoT platform managing 50,000+ sensors with real-time AI analytics.",
+      title: "Lyvaa",
+      category: "Web Apps",
+      description: "E-commerce and lifestyle brand site.",
+      image: "/health-tracking-app.png",
+      tags: ["Commerce", "Web"],
+      gradient: "from-blue-500 to-cyan-500",
+      url: "https://lyvaa.com",
+    },
+    {
+      title: "N3xVenture",
+      category: "Web Apps",
+      description: "Venture and startup studio.",
       image: "/smart-city-iot-network-visualization.jpg",
-      tags: ["Python", "TensorFlow", "MQTT"],
+      tags: ["Startup", "Web"],
       gradient: "from-emerald-500 to-teal-500",
+      url: "https://n3xventure.xyz",
+    },
+    {
+      title: "Being Smile",
+      category: "Web Apps",
+      description: "Nonprofit organization platform.",
+      image: "/modern-financial-dashboard-dark-theme.jpg",
+      tags: ["NGO", "Web"],
+      gradient: "from-cyan-500 to-blue-500",
+      url: "https://beingsmile.org",
+    },
+    {
+      title: "Tusqa Wellbeing",
+      category: "Web Apps",
+      description: "Health and wellbeing services.",
+      image: "/cloud-infrastructure-network-visualization.jpg",
+      tags: ["Health", "Web"],
+      gradient: "from-purple-500 to-pink-500",
+      url: "https://tusqawellbeing.com",
+    },
+    {
+      title: "Unies",
+      category: "Web Apps",
+      description: "Business services company.",
+      image: "/modern-design-system-components.jpg",
+      tags: ["Business", "Web"],
+      gradient: "from-violet-500 to-purple-500",
+      url: "https://unies.com.bd",
+    },
+    {
+      title: "Net Speed Analyzer",
+      category: "Web Apps",
+      description: "Speed and network diagnostics tool.",
+      image: "/smart-city-iot-network-visualization.jpg",
+      tags: ["PWA", "Web"],
+      gradient: "from-emerald-500 to-teal-500",
+      url: "https://siamahamed57.github.io/NetSpeedAnalyzer/",
     },
   ]
 
@@ -127,14 +169,18 @@ export default function ProjectsPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-60" />
 
-                    {/* Hover Overlay */}
+                    {/* Hover Overlay */
+                    // Link overlays to the project URL
+                    }
                     <div className="absolute inset-0 flex items-center justify-center bg-background/80 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
                       <div className="text-center">
                         <p className="mb-4 px-4 text-sm text-muted-foreground">{project.description}</p>
-                        <Button className="glow-cyan group/btn">
-                          View Project
-                          <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                        </Button>
+                        <a href={(project as any).url} target="_blank" rel="noopener noreferrer">
+                          <Button className="glow-cyan group/btn">
+                            View Project
+                            <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                          </Button>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -146,7 +192,11 @@ export default function ProjectsPage() {
                         {project.category}
                       </Badge>
                     </div>
-                    <h3 className="mb-3 text-xl font-bold">{project.title}</h3>
+                    <h3 className="mb-3 text-xl font-bold">
+                      <a href={(project as any).url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                        {project.title}
+                      </a>
+                    </h3>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <Badge key={tag} variant="outline" className="text-xs">
