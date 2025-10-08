@@ -1,0 +1,29 @@
+name: Upstream Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Upstream Sync
+        uses: aormsby/Fork-Sync-With-Upstream-action@v3.4.1
+        with:
+          target_sync_branch: main
+          target_repo_token: ${{ secrets.GITHUB_TOKEN }}
+          upstream_sync_repo: rahulxiao/astronyvia
+          upstream_sync_branch: main
+          git_log_format_args: --pretty=oneline
+          upstream_pull_args: --ff-only
+          git_config_pull_rebase: false
+          test_mode: false
+          host_domain: github.com
+          shallow_since: 1 month ago
