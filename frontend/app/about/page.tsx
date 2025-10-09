@@ -1,3 +1,4 @@
+"use client"
 import { Card } from "@/components/ui/card"
 import { AnimatedSection } from "@/components/animated-section"
 import { ParticleBackground } from "@/components/particle-background"

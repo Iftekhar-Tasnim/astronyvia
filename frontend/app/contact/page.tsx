@@ -251,8 +251,8 @@ export default function ContactPage() {
                     q: "How do you ensure project success?",
                     a: "We follow agile methodologies with regular check-ins, transparent communication, and iterative development.",
                   },
-                ].map((faq, index) => (
-                  <div key={index} className="space-y-2">
+                ].map((faq) => (
+                  <div key={faq.q} className="space-y-2">
                     <h3 className="font-semibold">{faq.q}</h3>
                     <p className="text-sm text-muted-foreground">{faq.a}</p>
                   </div>
