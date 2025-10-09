@@ -4,83 +4,70 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { AnimatedSection } from "@/components/animated-section"
 import { ParticleBackground } from "@/components/particle-background"
-import { Brain, Cloud, Code, Palette, Database, ArrowRight, CheckCircle2 } from "lucide-react"
+import { Palette, ArrowRight, CheckCircle2, Globe2, Smartphone, Server, Wrench, Search } from "lucide-react"
 import Link from "next/link"
 
 export default function ServicesPage() {
   const services = [
     {
-      icon: Brain,
-      title: "Artificial Intelligence & Automation",
+      icon: Globe2,
+      title: "Website, Web Application & E-Commerce Development",
       description:
-        "Transform your business with intelligent systems that learn, adapt, and optimize operations automatically.",
-      features: [
-        "Machine Learning Models",
-        "Natural Language Processing",
-        "Computer Vision Solutions",
-        "Predictive Analytics",
-        "AI-Powered Chatbots",
-        "Process Automation",
-      ],
+        "We design and develop fast, responsive, and professional websites, custom web applications, and secure e-commerce platforms with comprehensive maintenance and support.",
+      details:
+        "We create modern, responsive websites and web applications that deliver exceptional user experiences. Our e-commerce solutions include secure payment gateways, product management systems, and customer-friendly interfaces. We also provide ongoing maintenance and support to ensure your digital presence remains current and secure.",
+      features: ["Business Websites", "Web Applications", "E-Commerce Platforms", "Maintenance & Support"],
       gradient: "from-cyan-500 to-blue-500",
     },
     {
-      icon: Cloud,
-      title: "Cloud Infrastructure",
+      icon: Smartphone,
+      title: "Android Application Development",
       description:
-        "Build scalable, resilient cloud architectures that grow with your business and ensure maximum uptime.",
-      features: [
-        "Cloud Migration Services",
-        "Kubernetes Orchestration",
-        "Serverless Architecture",
-        "DevOps & CI/CD",
-        "Infrastructure as Code",
-        "Cloud Security",
-      ],
+        "We create user-friendly, high-performance Android apps tailored to your business needs with attractive UI/UX design and seamless integration.",
+      details:
+        "We specialize in developing native Android applications that provide exceptional user experiences. Our apps feature attractive UI/UX design, seamless integration with business systems, and comprehensive testing to ensure bug-free performance and timely updates.",
+      features: ["Custom Android Apps", "UI/UX Design", "Integration", "Testing & Maintenance"],
       gradient: "from-purple-500 to-pink-500",
     },
     {
-      icon: Code,
-      title: "Web & Mobile Development",
+      icon: Server,
+      title: "Software Development",
       description:
-        "Create stunning, high-performance applications that deliver exceptional user experiences across all devices.",
-      features: [
-        "Full-Stack Development",
-        "Progressive Web Apps",
-        "Native Mobile Apps",
-        "API Development",
-        "E-commerce Solutions",
-        "Real-time Applications",
-      ],
+        "We provide tailored software solutions to streamline business operations including custom software, desktop applications, and cloud integration.",
+      details:
+        "We develop custom software solutions that perfectly fit your business processes and requirements. From ERP and CRM systems to desktop applications and cloud-integrated solutions, we create software that grows with your business and ensures optimal performance.",
+      features: ["Custom Software", "Desktop Applications", "Cloud Integration", "Testing & Quality Assurance"],
       gradient: "from-pink-500 to-rose-500",
     },
     {
-      icon: Palette,
-      title: "UX / UI Engineering",
-      description: "Design beautiful, intuitive interfaces that users love, backed by research and best practices.",
-      features: [
-        "User Research & Testing",
-        "Interface Design",
-        "Design Systems",
-        "Prototyping",
-        "Accessibility Compliance",
-        "Brand Identity",
-      ],
+      icon: Wrench,
+      title: "Office Setup (Hardware Purchase & Installation)",
+      description:
+        "We set up complete office IT infrastructure including hardware procurement, installation, security solutions, and ongoing IT support.",
+      details:
+        "We provide comprehensive office IT infrastructure setup services, from hardware procurement and installation to security solutions and ongoing support. Our team ensures seamless integration of all systems and provides reliable IT support to keep your business running smoothly.",
+      features: ["Hardware Procurement", "Installation & Configuration", "Security Solutions", "IT Support & Maintenance"],
       gradient: "from-blue-500 to-cyan-500",
     },
     {
-      icon: Database,
-      title: "Data Systems",
-      description: "Build robust data pipelines and analytics platforms that turn raw data into actionable insights.",
-      features: [
-        "Data Warehousing",
-        "ETL Pipelines",
-        "Real-time Analytics",
-        "Data Visualization",
-        "Big Data Processing",
-        "Database Optimization",
-      ],
+      icon: Palette,
+      title: "3D Modeling & Game Asset Design",
+      description:
+        "We create high-quality digital assets for games, VR/AR, and marketing including 3D models, game assets, and product visualization.",
+      details:
+        "We specialize in creating high-quality 3D models and digital assets for games, VR/AR applications, and marketing purposes. Our team delivers optimized models for various platforms, complete with animation and rigging, plus realistic product visualization for marketing and presentations.",
+      features: ["3D Models", "Game Assets", "Animation & Rigging", "Product Visualization"],
       gradient: "from-violet-500 to-purple-500",
+    },
+    {
+      icon: Search,
+      title: "Search Engine Optimization (SEO)",
+      description:
+        "We help businesses rank higher on search engines and grow visibility through comprehensive on-page, off-page, and technical SEO strategies.",
+      details:
+        "We implement comprehensive SEO strategies to improve your search engine rankings and increase online visibility. Our approach includes on-page optimization, off-page strategies, technical improvements, and detailed analytics reporting to track performance and provide actionable insights.",
+      features: ["On-Page SEO", "Off-Page SEO", "Technical SEO", "Analytics & Reporting"],
+      gradient: "from-emerald-500 to-teal-500",
     },
   ]
 

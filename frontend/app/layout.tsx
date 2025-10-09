@@ -9,6 +9,7 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { PageTransition } from "@/components/page-transition"
 import { Suspense } from "react"
+import { ChatAssistant } from "@/components/chat-assistant"
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -114,6 +115,7 @@ export default function RootLayout({
           <PageTransition>{children}</PageTransition>
           <Footer />
         </Suspense>
+        <ChatAssistant />
         <Analytics />
       </body>
     </html>
