@@ -30,20 +30,20 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email",
-      value: "hello@astronyvia.com",
-      link: "mailto:hello@astronyvia.com",
+      value: "contactus@astronyvia.com",
+      link: "mailto:contactus@astronyvia.com",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "+880 15-2110-4415",
+      link: "tel:+8801521104415",
     },
     {
       icon: MapPin,
       title: "Office",
-      value: "San Francisco, CA",
-      link: "#",
+      value: "ECB Chattar, Dhaka, Bangladesh",
+      link: "https://www.google.com/maps/place/ECB+Chattar,+Dhaka/@23.8225706,90.3831293,15z/data=!3m1!4b1!4m6!3m5!1s0x3755c6c2ab936b87:0xcaa915c4069493be!8m2!3d23.8225517!4d90.3934291!16s%2Fg%2F11bztyyv98?entry=ttu&g_ep=EgoyMDI1MTAwNi4wIKXMDSoASAFQAw%3D%3D",
     },
   ]
 
@@ -159,12 +159,18 @@ export default function ContactPage() {
               <AnimatedSection delay={200}>
                 <Card className="glass neon-border-purple overflow-hidden border-border/50">
                   <div className="relative h-[300px] bg-gradient-to-br from-purple-500/20 to-pink-500/20">
-                    {/* Placeholder for map */}
-                    <div className="flex h-full items-center justify-center">
-                      <div className="text-center">
-                        <MapPin className="mx-auto mb-2 h-12 w-12 text-primary" />
-                        <p className="text-sm text-muted-foreground">San Francisco, CA</p>
-                      </div>
+                    {/* Google Map Embed */}
+                    <div className="relative h-full w-full overflow-hidden rounded-xl">
+                      <iframe
+                        title="Astronyvia Office Location"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.517074806516!2d90.3831293!3d23.8225706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c6c2ab936b87%3A0xcaa915c4069493be!2sECB%20Chattar%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1728490000000!5m2!1sen!2sbd"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        allowFullScreen
+                      />
                     </div>
                   </div>
                 </Card>
@@ -251,8 +257,8 @@ export default function ContactPage() {
                     q: "How do you ensure project success?",
                     a: "We follow agile methodologies with regular check-ins, transparent communication, and iterative development.",
                   },
-                ].map((faq, index) => (
-                  <div key={index} className="space-y-2">
+                ].map((faq) => (
+                  <div key={faq.q} className="space-y-2">
                     <h3 className="font-semibold">{faq.q}</h3>
                     <p className="text-sm text-muted-foreground">{faq.a}</p>
                   </div>

@@ -91,12 +91,12 @@ export default function HomePage() {
   ]
 
   const partners = [
-    { name: "React", logo: "/react-logo.png" },
-    { name: "Next.js", logo: "/nextjs-logo.png" },
-    { name: "TensorFlow", logo: "/tensorflow-logo.png" },
-    { name: "AWS", logo: "/aws-logo.png" },
-    { name: "Docker", logo: "/docker-logo.png" },
-    { name: "Kubernetes", logo: "/kubernetes-logo.png" },
+    { name: "Lyva", logo: "/lyva.png" },
+    { name: "BeingSmile", logo: "/beingsmile.png" },
+    { name: "Tusqa", logo: "/tusqa.png" },
+    { name: "Cineverse", logo: "/cineverse.png" },
+    { name: "ChatPoint", logo: "/chatpoint.png" },
+    { name: "ServiceTrek", logo: "/servicetrek.png" },
   ]
 
   return (
@@ -218,30 +218,42 @@ export default function HomePage() {
         <div className="container mx-auto max-w-7xl">
           <AnimatedSection>
             <div className="mb-12 text-center">
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl">Powered by Industry Leaders</h2>
+              <div className="mb-3 inline-block rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
+                Our Clients
+              </div>
+              <h2 className="mb-4 text-3xl font-bold md:text-4xl">Trusted by Innovative Teams</h2>
               <p className="mx-auto max-w-2xl text-balance text-muted-foreground">
-                We leverage the best technologies to deliver exceptional results
+                We partner with ambitious teams to launch and scale impactful products
+              </p>
+              <p className="mx-auto mt-2 max-w-xl text-balance text-xs text-muted-foreground/80">
+                From startups to enterprises, we deliver measurable results across industries
               </p>
             </div>
           </AnimatedSection>
 
           <AnimatedSection delay={100}>
-            <div className="glass neon-border-cyan rounded-3xl p-8">
-              <div className="grid grid-cols-3 gap-8 md:grid-cols-6">
-                {partners.map((partner, index) => (
-                  <div
-                    key={partner.name}
-                    className="flex items-center justify-center opacity-60 transition-opacity hover:opacity-100"
-                  >
-                    <Image
-                      src={partner.logo || "/placeholder.svg"}
-                      alt={partner.name}
-                      width={80}
-                      height={80}
-                      className="h-12 w-auto object-contain"
-                    />
-                  </div>
-                ))}
+            <div className="glass neon-border-cyan relative overflow-hidden rounded-3xl p-10 md:p-12">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5" />
+              <div className="relative overflow-hidden">
+                <div
+                  className="flex w-[200%] items-center gap-12 whitespace-nowrap"
+                  style={{ animation: "marqueeRight 30s linear infinite" }}
+                >
+                  {[...partners, ...partners].map((partner, index) => (
+                    <div key={`${partner.name}-${index}`} className="group flex min-w-40 flex-col items-center">
+                      <div className="flex h-24 w-40 items-center justify-center rounded-xl bg-background/20 p-4 transition-all group-hover:bg-background/30 sm:w-48 md:h-28 md:w-56 lg:h-32 lg:w-64">
+                        <Image
+                          src={partner.logo || "/placeholder.svg"}
+                          alt={partner.name}
+                          width={260}
+                          height={260}
+                          className="h-14 w-auto object-contain opacity-80 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:grayscale-0 md:h-16 lg:h-20"
+                        />
+                      </div>
+                      <span className="mt-2 text-xs text-muted-foreground">{partner.name}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </AnimatedSection>
@@ -327,7 +339,7 @@ export default function HomePage() {
                 <Card className="glass group h-full border-border/50 p-6 transition-all duration-300 hover:scale-105 hover:border-primary/50">
                   <div className="mb-4 flex gap-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                      <Star key={`${testimonial.name}-star-${i}`} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
                   <p className="mb-6 text-sm text-muted-foreground italic">"{testimonial.content}"</p>
@@ -438,6 +450,7 @@ export default function HomePage() {
               </p>
               <form className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row">
                 <input
+                  suppressHydrationWarning
                   type="email"
                   placeholder="Enter your email"
                   className="glass flex-1 rounded-lg border border-border/50 bg-background/50 px-4 py-3 text-sm outline-none transition-all focus:border-primary/50"
