@@ -4,6 +4,7 @@ import { AnimatedSection } from "@/components/animated-section"
 import { ParticleBackground } from "@/components/particle-background"
 import { Badge } from "@/components/ui/badge"
 import { Lightbulb, Target, Users, Zap } from "lucide-react"
+import { VisualTimeline } from "@/components/visual-timeline"
 
 export default function AboutPage() {
   const timeline = [
@@ -165,48 +166,13 @@ export default function AboutPage() {
             </div>
           </AnimatedSection>
 
-          <div className="relative space-y-12">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 top-0 hidden h-full w-0.5 -translate-x-1/2 bg-gradient-to-b from-cyan-500 via-purple-500 to-pink-500 lg:block" />
-
-            {timeline.map((item, index) => (
-              <AnimatedSection key={item.year} delay={index * 100}>
-                <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-                  {/* Left side - even indices */}
-                  {index % 2 === 0 ? (
-                    <>
-                      <div className="lg:text-right">
-                        <Card className="glass neon-border-cyan border-border/50 p-6 backdrop-blur-xl">
-                          <div className="mb-2 text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                            {item.year}
-                          </div>
-                          <h3 className="mb-2 text-xl font-semibold">{item.title}</h3>
-                          <p className="text-muted-foreground">{item.description}</p>
-                        </Card>
-                      </div>
-                      <div className="hidden lg:block" />
-                    </>
-                  ) : (
-                    <>
-                      <div className="hidden lg:block" />
-                      <div>
-                        <Card className="glass neon-border-purple border-border/50 p-6 backdrop-blur-xl">
-                          <div className="mb-2 text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                            {item.year}
-                          </div>
-                          <h3 className="mb-2 text-xl font-semibold">{item.title}</h3>
-                          <p className="text-muted-foreground">{item.description}</p>
-                        </Card>
-                      </div>
-                    </>
-                  )}
-
-                  {/* Timeline dot */}
-                  <div className="absolute left-1/2 top-8 hidden h-4 w-4 -translate-x-1/2 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 ring-4 ring-background shadow-lg shadow-primary/50 lg:block" />
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
+          <VisualTimeline
+            steps={timeline.map((item) => ({
+              number: item.year,
+              title: item.title,
+              description: item.description,
+            }))}
+          />
         </div>
       </section>
 

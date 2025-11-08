@@ -69,7 +69,10 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/50 pt-8 md:flex-row">
-          <p className="text-sm text-muted-foreground">© 2025 Astronyvia. All rights reserved.</p>
+          <div className="flex flex-col items-center gap-2 md:items-start">
+            <p className="text-sm text-muted-foreground">© 2025 Astronyvia. All rights reserved.</p>
+            <p className="text-xs text-muted-foreground/80">Developed by Astronyvia.com</p>
+          </div>
           <div className="flex gap-4">
             <Link
               href="#"

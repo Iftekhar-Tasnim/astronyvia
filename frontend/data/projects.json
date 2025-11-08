@@ -1,0 +1,185 @@
+{
+  "projects": [
+    {
+      "id": "chatterpoint",
+      "title": "ChatterPoint",
+      "category": "Web Apps",
+      "description": "Real-time chat and collaboration platform.",
+      "fullDescription": "ChatterPoint is a comprehensive real-time communication platform that enables teams to collaborate seamlessly. Built with React and Firebase, it offers instant messaging, file sharing, and video conferencing capabilities. The platform features a modern, intuitive interface designed for productivity and engagement.",
+      "image": "/chatpoint.png",
+      "tags": ["React", "Firebase", "Real-time", "Collaboration"],
+      "gradient": "from-cyan-500 to-blue-500",
+      "liveUrl": "https://chatterpoint.web.app/",
+      "technologies": ["React", "Firebase", "TypeScript", "Tailwind CSS"],
+      "features": [
+        "Real-time messaging",
+        "File sharing",
+        "Video conferencing",
+        "Team collaboration tools"
+      ]
+    },
+    {
+      "id": "servicetrek",
+      "title": "ServiceTrek",
+      "category": "Web Apps",
+      "description": "Service management and booking application.",
+      "fullDescription": "ServiceTrek is a comprehensive service management platform that streamlines booking, scheduling, and customer management. Integrated with Stripe for secure payments, it provides businesses with a complete solution for managing their service operations efficiently.",
+      "image": "/servicetrek.png",
+      "tags": ["Next.js", "Stripe", "Booking", "Management"],
+      "gradient": "from-purple-500 to-pink-500",
+      "liveUrl": "https://servicetrek-ff5f1.web.app/",
+      "technologies": ["Next.js", "Stripe", "TypeScript", "PostgreSQL"],
+      "features": [
+        "Service booking system",
+        "Payment integration",
+        "Customer management",
+        "Scheduling tools"
+      ]
+    },
+    {
+      "id": "cineverse",
+      "title": "CineVerse",
+      "category": "Web Apps",
+      "description": "Movie discovery and tracking experience.",
+      "fullDescription": "CineVerse is an immersive movie discovery platform that helps users find, track, and explore films. Integrated with TMDB API, it provides comprehensive movie information, ratings, reviews, and personalized recommendations.",
+      "image": "/cineverse.png",
+      "tags": ["React", "TMDB API", "Entertainment", "Discovery"],
+      "gradient": "from-pink-500 to-rose-500",
+      "liveUrl": "https://cineverse-dffdc.web.app/",
+      "technologies": ["React", "TMDB API", "JavaScript", "CSS3"],
+      "features": [
+        "Movie discovery",
+        "Watchlist tracking",
+        "Ratings and reviews",
+        "Personalized recommendations"
+      ]
+    },
+    {
+      "id": "uixpertise",
+      "title": "UIXpertise",
+      "category": "Web Apps",
+      "description": "UX/UI agency site.",
+      "fullDescription": "UIXpertise is a modern design agency website showcasing innovative UX/UI solutions. The platform features a stunning design system with interactive components, case studies, and a portfolio that demonstrates creative excellence.",
+      "image": "/modern-design-system-components.jpg",
+      "tags": ["Design", "Web", "Agency", "Portfolio"],
+      "gradient": "from-violet-500 to-purple-500",
+      "liveUrl": "https://uixpertise.com",
+      "technologies": ["Next.js", "Framer Motion", "TypeScript", "Tailwind CSS"],
+      "features": [
+        "Interactive portfolio",
+        "Case studies",
+        "Design system showcase",
+        "Client testimonials"
+      ]
+    },
+    {
+      "id": "lyvaa",
+      "title": "Lyvaa",
+      "category": "Web Apps",
+      "description": "E-commerce and lifestyle brand site.",
+      "fullDescription": "Lyvaa is a premium e-commerce platform for lifestyle products. The platform offers a seamless shopping experience with secure checkout, product recommendations, and comprehensive inventory management.",
+      "image": "/lyva.png",
+      "tags": ["Commerce", "Web", "E-commerce", "Lifestyle"],
+      "gradient": "from-blue-500 to-cyan-500",
+      "liveUrl": "https://lyvaa.com",
+      "technologies": ["Next.js", "Shopify", "TypeScript", "Stripe"],
+      "features": [
+        "Product catalog",
+        "Shopping cart",
+        "Secure checkout",
+        "Order tracking"
+      ]
+    },
+    {
+      "id": "n3xventure",
+      "title": "N3xVenture",
+      "category": "Web Apps",
+      "description": "Venture and startup studio.",
+      "fullDescription": "N3xVenture is a venture capital and startup studio platform that connects entrepreneurs with investors. The platform features portfolio management, investment tracking, and networking capabilities.",
+      "image": "/smart-city-iot-network-visualization.jpg",
+      "tags": ["Startup", "Web", "Venture", "Investment"],
+      "gradient": "from-emerald-500 to-teal-500",
+      "liveUrl": "https://n3xventure.xyz",
+      "technologies": ["React", "Node.js", "MongoDB", "Express"],
+      "features": [
+        "Portfolio management",
+        "Investment tracking",
+        "Startup directory",
+        "Networking tools"
+      ]
+    },
+    {
+      "id": "beingsmile",
+      "title": "Being Smile",
+      "category": "Web Apps",
+      "description": "Nonprofit organization platform.",
+      "fullDescription": "Being Smile is a nonprofit organization platform designed to facilitate donations, volunteer management, and impact tracking. The platform helps connect donors with causes and provides transparency in charitable activities.",
+      "image": "/beingsmile.png",
+      "tags": ["NGO", "Web", "Nonprofit", "Social Impact"],
+      "gradient": "from-cyan-500 to-blue-500",
+      "liveUrl": "https://beingsmile.org",
+      "technologies": ["Next.js", "Stripe", "TypeScript", "PostgreSQL"],
+      "features": [
+        "Donation system",
+        "Volunteer management",
+        "Impact tracking",
+        "Transparency reports"
+      ]
+    },
+    {
+      "id": "tusqa",
+      "title": "Tusqa Wellbeing",
+      "category": "Web Apps",
+      "description": "Health and wellbeing services.",
+      "fullDescription": "Tusqa Wellbeing is a comprehensive health and wellness platform offering services, resources, and tools for personal wellbeing. The platform provides access to health professionals, wellness programs, and educational content.",
+      "image": "/tusqa.png",
+      "tags": ["Health", "Web", "Wellness", "Healthcare"],
+      "gradient": "from-purple-500 to-pink-500",
+      "liveUrl": "https://tusqawellbeing.com",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+      "features": [
+        "Service booking",
+        "Health resources",
+        "Professional directory",
+        "Wellness programs"
+      ]
+    },
+    {
+      "id": "unies",
+      "title": "Unies",
+      "category": "Web Apps",
+      "description": "Business services company.",
+      "fullDescription": "Unies is a business services platform offering comprehensive solutions for companies. The platform provides consulting services, business tools, and resources to help organizations grow and succeed.",
+      "image": "/modern-design-system-components.jpg",
+      "tags": ["Business", "Web", "Services", "Consulting"],
+      "gradient": "from-violet-500 to-purple-500",
+      "liveUrl": "https://unies.com.bd",
+      "technologies": ["Next.js", "TypeScript", "PostgreSQL", "Stripe"],
+      "features": [
+        "Service catalog",
+        "Consulting booking",
+        "Business resources",
+        "Client portal"
+      ]
+    },
+    {
+      "id": "netspeed",
+      "title": "Net Speed Analyzer",
+      "category": "Web Apps",
+      "description": "Speed and network diagnostics tool.",
+      "fullDescription": "Net Speed Analyzer is a Progressive Web App (PWA) that provides comprehensive network speed testing and diagnostics. The tool helps users analyze their internet connection, identify issues, and optimize network performance.",
+      "image": "/smart-city-iot-network-visualization.jpg",
+      "tags": ["PWA", "Web", "Network", "Diagnostics"],
+      "gradient": "from-emerald-500 to-teal-500",
+      "liveUrl": "https://siamahamed57.github.io/NetSpeedAnalyzer/",
+      "technologies": ["JavaScript", "PWA", "Web APIs", "HTML5"],
+      "features": [
+        "Speed testing",
+        "Network diagnostics",
+        "Performance metrics",
+        "Offline support"
+      ]
+    }
+  ]
+}
+

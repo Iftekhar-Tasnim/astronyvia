@@ -6,7 +6,9 @@ import { Card } from "@/components/ui/card"
 import { AnimatedSection } from "@/components/animated-section"
 import { ParticleBackground } from "@/components/particle-background"
 import { Badge } from "@/components/ui/badge"
-import { ExternalLink } from "lucide-react"
+import { ExternalLink, ArrowRight } from "lucide-react"
+import Link from "next/link"
+import { FAQSection } from "@/components/faq-section"
 
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("All")
@@ -143,7 +145,7 @@ export default function ProjectsPage() {
                   variant={activeFilter === filter ? "default" : "ghost"}
                   size="sm"
                   onClick={() => setActiveFilter(filter)}
-                  className=""
+                  className={activeFilter === filter ? "rounded-[100px]" : ""}
                 >
                   {filter}
                 </Button>
@@ -156,8 +158,15 @@ export default function ProjectsPage() {
       {/* Projects Grid */}
       <section className="relative px-6 py-12 md:px-8 lg:px-12">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {filteredProjects.map((project, index) => (
+          {filteredProjects.length === 0 ? (
+            <AnimatedSection>
+              <div className="glass neon-border-cyan rounded-3xl p-12 text-center">
+                <p className="text-lg text-muted-foreground">Projects will be updated soon.</p>
+              </div>
+            </AnimatedSection>
+          ) : (
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {filteredProjects.map((project, index) => (
               <AnimatedSection key={project.title} delay={index * 100}>
                 <Card className="group relative h-full overflow-hidden border transition-all duration-300 hover:scale-[1.02]">
                   {/* Project Image */}
@@ -169,18 +178,16 @@ export default function ProjectsPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-60" />
 
-                    {/* Hover Overlay */
-                    // Link overlays to the project URL
-                    }
+                    {/* Hover Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center bg-background/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                       <div className="text-center">
                         <p className="mb-4 px-4 text-sm text-muted-foreground">{project.description}</p>
-                        <a href={(project as any).url} target="_blank" rel="noopener noreferrer">
+                        <Link href={`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`}>
                           <Button className="glow-cyan group/btn">
-                            View Project
-                            <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                            View Details
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                           </Button>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -193,9 +200,9 @@ export default function ProjectsPage() {
                       </Badge>
                     </div>
                     <h3 className="mb-3 text-xl font-bold">
-                      <a href={(project as any).url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                      <Link href={`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`} className="hover:underline">
                         {project.title}
-                      </a>
+                      </Link>
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
@@ -208,7 +215,8 @@ export default function ProjectsPage() {
                 </Card>
               </AnimatedSection>
             ))}
-          </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -234,6 +242,29 @@ export default function ProjectsPage() {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection
+        faqs={[
+          {
+            q: "Can I see examples of your previous work?",
+            a: "Yes! Browse our projects page to see detailed case studies of our completed work across various industries and technologies.",
+          },
+          {
+            q: "What types of projects do you take on?",
+            a: "We work on a wide range of projects including web applications, mobile apps, e-commerce platforms, AI solutions, cloud infrastructure, and more.",
+          },
+          {
+            q: "How do you ensure project quality?",
+            a: "We follow industry best practices, conduct thorough testing, implement code reviews, and maintain transparent communication throughout the development process.",
+          },
+          {
+            q: "What is your project delivery process?",
+            a: "We follow an agile methodology with regular milestones, client feedback sessions, and iterative development to ensure we meet your expectations at every stage.",
+          },
+        ]}
+        className="relative"
+      />
 
       {/* CTA Section */}
       <section className="relative px-6 py-24 md:px-8 lg:px-12">

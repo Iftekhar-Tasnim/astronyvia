@@ -6,6 +6,8 @@ import { AnimatedSection } from "@/components/animated-section"
 import { ParticleBackground } from "@/components/particle-background"
 import { Palette, ArrowRight, CheckCircle2, Globe2, Smartphone, Server, Wrench, Search } from "lucide-react"
 import Link from "next/link"
+import { VisualTimeline } from "@/components/visual-timeline"
+import { FAQSection } from "@/components/faq-section"
 
 export default function ServicesPage() {
   const services = [
@@ -233,40 +235,55 @@ export default function ServicesPage() {
             </div>
           </AnimatedSection>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {[
+          <VisualTimeline
+            steps={[
               {
-                step: "01",
+                number: "01",
                 title: "Discovery",
                 description: "We analyze your needs and define project goals together.",
               },
               {
-                step: "02",
+                number: "02",
                 title: "Design",
                 description: "Creating intuitive solutions that align with your vision.",
               },
               {
-                step: "03",
+                number: "03",
                 title: "Development",
                 description: "Building robust, scalable systems with best practices.",
               },
               {
-                step: "04",
+                number: "04",
                 title: "Deployment",
                 description: "Launching your solution with ongoing support and optimization.",
               },
-            ].map((phase, index) => (
-              <AnimatedSection key={phase.step} delay={index * 100}>
-                <Card className="glass relative h-full border-border/50 p-6">
-                  <div className="mb-4 text-5xl font-bold text-primary/20">{phase.step}</div>
-                  <h3 className="mb-2 text-xl font-semibold">{phase.title}</h3>
-                  <p className="text-sm text-muted-foreground">{phase.description}</p>
-                </Card>
-              </AnimatedSection>
-            ))}
-          </div>
+            ]}
+          />
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection
+        faqs={[
+          {
+            q: "What services do you offer?",
+            a: "We offer comprehensive technology solutions including web development, mobile app development, AI solutions, cloud services, 3D modeling, SEO, and office IT setup.",
+          },
+          {
+            q: "How long does a typical project take?",
+            a: "Project timelines vary based on scope and complexity. Simple websites may take 4-8 weeks, while complex applications can take 12-24 weeks. We provide detailed timelines during the discovery phase.",
+          },
+          {
+            q: "Do you provide ongoing support and maintenance?",
+            a: "Yes, we offer comprehensive maintenance and support packages to ensure your systems remain secure, updated, and performing optimally after launch.",
+          },
+          {
+            q: "What technologies do you work with?",
+            a: "We work with modern technologies including React, Next.js, Node.js, Python, AWS, Docker, Kubernetes, and many others. We choose the best stack for each project's specific needs.",
+          },
+        ]}
+        className="relative"
+      />
 
       {/* CTA Section */}
       <section className="relative px-6 py-24 md:px-8 lg:px-12">

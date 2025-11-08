@@ -2,187 +2,172 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ParticleBackground } from "@/components/particle-background"
 import { AnimatedSection } from "@/components/animated-section"
-import { ArrowRight, Brain, Cloud, Code, Palette, Zap, Users, TrendingUp, Clock, Star, Send } from "lucide-react"
+import { ArrowRight, Brain, Cloud, Code, Palette, Star } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
 export default function HomePage() {
-  const features = [
+  const services = [
     {
       icon: Brain,
-      title: "AI Systems",
-      description: "Advanced machine learning and neural networks powering intelligent solutions.",
-      gradient: "from-cyan-500 to-blue-500",
+      title: "AI & Machine Learning",
+      description: "Advanced AI solutions that transform businesses and drive innovation.",
+      href: "/services",
     },
     {
       icon: Cloud,
-      title: "Cloud Platforms",
-      description: "Scalable infrastructure and cloud-native architectures for modern applications.",
-      gradient: "from-purple-500 to-pink-500",
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud platforms built for performance and reliability.",
+      href: "/services",
     },
     {
       icon: Code,
-      title: "Web Apps",
-      description: "Full-stack development with cutting-edge frameworks and technologies.",
-      gradient: "from-pink-500 to-rose-500",
+      title: "Web Development",
+      description: "Modern web applications with cutting-edge technologies.",
+      href: "/services",
     },
     {
       icon: Palette,
-      title: "UX Design",
-      description: "Beautiful, intuitive interfaces that users love to interact with.",
-      gradient: "from-blue-500 to-cyan-500",
+      title: "UX/UI Design",
+      description: "Beautiful, intuitive interfaces that users love.",
+      href: "/services",
     },
   ]
 
   const stats = [
-    { icon: Zap, value: "500+", label: "Projects Delivered" },
-    { icon: Users, value: "200+", label: "Happy Clients" },
-    { icon: TrendingUp, value: "99.9%", label: "Success Rate" },
-    { icon: Clock, value: "24/7", label: "Uptime" },
+    { value: "500+", label: "Projects Delivered" },
+    { value: "200+", label: "Happy Clients" },
+    { value: "99.9%", label: "Success Rate" },
+    { value: "15+", label: "Years Experience" },
   ]
 
   const testimonials = [
     {
       name: "Sarah Chen",
       role: "CTO, TechCorp",
-      content:
-        "Astronyvia transformed our infrastructure with their cloud solutions. The team's expertise in AI and scalability is unmatched.",
+      content: "Astronyvia transformed our infrastructure with their cloud solutions. The team's expertise in AI and scalability is unmatched.",
       rating: 5,
-      avatar: "https://images.pexels.com/photos/7691739/pexels-photo-7691739.jpeg",
     },
     {
       name: "Michael Rodriguez",
       role: "CEO, StartupX",
-      content:
-        "Working with Astronyvia was a game-changer. They delivered our MVP in record time with exceptional quality.",
+      content: "Working with Astronyvia was a game-changer. They delivered our MVP in record time with exceptional quality.",
       rating: 5,
-      avatar: "https://images.pexels.com/photos/671800/pexels-photo-671800.jpeg",
     },
     {
       name: "Emily Watson",
       role: "Product Lead, InnovateCo",
       content: "The AI solutions they built for us increased our efficiency by 300%. Truly next-generation technology.",
       rating: 5,
-      avatar: "https://images.pexels.com/photos/837306/pexels-photo-837306.jpeg",
     },
   ]
 
-  const processSteps = [
+  const featuredProjects = [
     {
-      number: "01",
-      title: "Discovery",
-      description: "We dive deep into your business needs and goals to create a tailored strategy.",
+      title: "AI E-Commerce Platform",
+      category: "AI & Machine Learning",
+      image: "/lyva.png",
+      href: "/projects",
     },
     {
-      number: "02",
-      title: "Design",
-      description: "Our team crafts beautiful, intuitive interfaces that users love.",
+      title: "Cloud Infrastructure",
+      category: "Cloud Solutions",
+      image: "/beingsmile.png",
+      href: "/projects",
     },
     {
-      number: "03",
-      title: "Development",
-      description: "We build scalable, high-performance solutions using cutting-edge technology.",
+      title: "FinTech Dashboard",
+      category: "Web Development",
+      image: "/tusqa.png",
+      href: "/projects",
     },
-    {
-      number: "04",
-      title: "Deployment",
-      description: "Seamless launch with ongoing support and optimization for success.",
-    },
-  ]
-
-  const partners = [
-    { name: "Lyva", logo: "/lyva.png" },
-    { name: "BeingSmile", logo: "/beingsmile.png" },
-    { name: "Tusqa", logo: "/tusqa.png" },
-    { name: "Cineverse", logo: "/cineverse.png" },
-    { name: "ChatPoint", logo: "/chatpoint.png" },
-    { name: "ServiceTrek", logo: "/servicetrek.png" },
   ]
 
   return (
-    <main className="relative min-h-screen">
+    <main className="relative min-h-screen overflow-hidden">
       <ParticleBackground />
+      
+      {/* Background decorative elements */}
+      <div className="pointer-events-none fixed inset-0 z-0">
+        {/* Large gradient orbs */}
+        <div className="absolute -left-1/4 top-1/4 h-96 w-96 rounded-full bg-gradient-to-br from-cyan-500/20 to-transparent blur-3xl dark:from-cyan-500/10" />
+        <div className="absolute -right-1/4 top-1/3 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-purple-500/20 to-transparent blur-3xl dark:from-purple-500/10" />
+        <div className="absolute bottom-1/4 left-1/3 h-80 w-80 rounded-full bg-gradient-to-br from-pink-500/20 to-transparent blur-3xl dark:from-pink-500/10" />
+      </div>
 
       {/* Hero Section */}
-      <section className="relative flex min-h-screen items-center justify-center px-6 pt-32 md:px-8 lg:px-12">
-        <div className="container mx-auto max-w-7xl text-center">
-          <AnimatedSection>
-            <div className="mb-6 inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary backdrop-blur-sm">
-              We are always here to help you
-            </div>
-          </AnimatedSection>
+      <section className="relative z-10 flex min-h-[90vh] items-center justify-center px-6 pt-24 pb-16 md:px-8 lg:px-12">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center">
+            <AnimatedSection>
+              <p className="mb-6 text-sm font-medium uppercase tracking-wider text-primary md:text-base">
+                Technology Solutions for Modern Businesses
+              </p>
+            </AnimatedSection>
 
-          <AnimatedSection delay={100}>
-            <h1 className="mb-6 text-balance text-5xl font-bold leading-tight tracking-tight md:text-7xl lg:text-8xl">
-              Building the Future of{" "}
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Intelligence
-              </span>
-            </h1>
-          </AnimatedSection>
+            <AnimatedSection delay={100}>
+              <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
+                Building the Future of{" "}
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Intelligence
+                </span>
+              </h1>
+            </AnimatedSection>
 
-          <AnimatedSection delay={200}>
-            <p className="mx-auto mb-10 max-w-2xl text-balance text-lg text-muted-foreground md:text-xl">
-              Empower your entire organization to create at the speed of thought, while ensuring security remains at the
-              forefront.
-            </p>
-          </AnimatedSection>
+            <AnimatedSection delay={200}>
+              <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+                We design, build, and scale high-performance AI, cloud, and web solutions that empower businesses to thrive in the digital age.
+              </p>
+            </AnimatedSection>
 
-          <AnimatedSection delay={300}>
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button size="lg" className="glow-cyan group">
-                Get Started
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button size="lg" variant="outline" className="glass group bg-transparent">
-                Watch Demo
-                <div className="ml-2 flex h-6 w-6 items-center justify-center rounded-full bg-primary/20">
-                  <div className="h-0 w-0 border-y-4 border-l-8 border-y-transparent border-l-primary" />
-                </div>
-              </Button>
-            </div>
-          </AnimatedSection>
-
-          {/* Floating Elements */}
-          <div className="absolute left-10 top-1/4 hidden animate-float lg:block">
-            <div className="glass neon-border-cyan h-20 w-20 rounded-2xl p-4">
-              <Brain className="h-full w-full text-cyan-400" />
-            </div>
-          </div>
-          <div className="absolute right-10 top-1/3 hidden animate-float lg:block" style={{ animationDelay: "1s" }}>
-            <div className="glass neon-border-purple h-20 w-20 rounded-2xl p-4">
-              <Zap className="h-full w-full text-purple-400" />
-            </div>
+            <AnimatedSection delay={300}>
+              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <Button size="lg" className="glow-cyan group" asChild>
+                  <Link href="/contact">
+                    Get Started
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" className="group" asChild>
+                  <Link href="/projects">
+                    View Our Work
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </Button>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="relative px-6 py-24 md:px-8 lg:px-12">
-        <div className="container mx-auto max-w-7xl">
+      {/* Services Section */}
+      <section className="relative z-10 px-6 py-20 md:px-8 lg:px-12 lg:py-28">
+        <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
-            <div className="mb-16 text-center">
-              <h2 className="mb-4 text-4xl font-bold md:text-5xl">What We Build</h2>
-              <p className="mx-auto max-w-2xl text-balance text-lg text-muted-foreground">
-                Cutting-edge solutions powered by the latest technologies and innovative thinking.
+            <div className="mb-12 text-center md:mb-16">
+              <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">Our Services</h2>
+              <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                Comprehensive technology solutions designed to accelerate your digital transformation
               </p>
             </div>
           </AnimatedSection>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {features.map((feature, index) => (
-              <AnimatedSection key={feature.title} delay={index * 100}>
-                <Card className="glass group relative h-full overflow-hidden border-border/50 p-6 transition-all duration-300 hover:scale-105 hover:border-primary/50">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-                  <div className="relative">
-                    <div
-                      className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${feature.gradient} p-2.5`}
-                    >
-                      <feature.icon className="h-full w-full text-white" />
-                    </div>
-                    <h3 className="mb-2 text-xl font-semibold">{feature.title}</h3>
-                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+            {services.map((service, index) => (
+              <AnimatedSection key={service.title} delay={index * 100}>
+                <Card className="glass group h-full border-border/50 p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary/20">
+                    <service.icon className="h-6 w-6 text-primary" />
                   </div>
+                  <h3 className="mb-2 text-xl font-semibold">{service.title}</h3>
+                  <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{service.description}</p>
+                  <Link
+                    href={service.href}
+                    className="inline-flex items-center text-sm font-medium text-primary transition-colors hover:text-primary/80"
+                  >
+                    Learn more
+                    <ArrowRight className="ml-1 h-4 w-4" />
+                  </Link>
                 </Card>
               </AnimatedSection>
             ))}
@@ -191,233 +176,56 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="relative px-6 py-24 md:px-8 lg:px-12">
-        <div className="container mx-auto max-w-7xl">
-          <AnimatedSection>
-            <div className="glass neon-border-cyan rounded-3xl p-12">
-              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                {stats.map((stat, index) => (
-                  <div key={stat.label} className="text-center">
-                    <div className="mb-4 flex justify-center">
-                      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/20">
-                        <stat.icon className="h-8 w-8 text-primary" />
-                      </div>
-                    </div>
-                    <div className="mb-2 text-4xl font-bold text-glow">{stat.value}</div>
-                    <div className="text-sm text-muted-foreground">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Partners/Tech Stack Section */}
-      <section className="relative px-6 py-24 md:px-8 lg:px-12">
-        <div className="container mx-auto max-w-7xl">
-          <AnimatedSection>
-            <div className="mb-12 text-center">
-              <div className="mb-3 inline-block rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
-                Our Clients
-              </div>
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl">Trusted by Innovative Teams</h2>
-              <p className="mx-auto max-w-2xl text-balance text-muted-foreground">
-                We partner with ambitious teams to launch and scale impactful products
-              </p>
-              <p className="mx-auto mt-2 max-w-xl text-balance text-xs text-muted-foreground/80">
-                From startups to enterprises, we deliver measurable results across industries
-              </p>
-            </div>
-          </AnimatedSection>
-
-          <AnimatedSection delay={100}>
-            <div className="glass neon-border-cyan relative overflow-hidden rounded-3xl p-10 md:p-12">
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5" />
-              <div className="relative overflow-hidden">
-                <div
-                  className="flex w-[200%] items-center gap-12 whitespace-nowrap"
-                  style={{ animation: "marqueeRight 30s linear infinite" }}
-                >
-                  {[...partners, ...partners].map((partner, index) => (
-                    <div key={`${partner.name}-${index}`} className="group flex min-w-40 flex-col items-center">
-                      <div className="flex h-24 w-40 items-center justify-center rounded-xl bg-background/20 p-4 transition-all group-hover:bg-background/30 sm:w-48 md:h-28 md:w-56 lg:h-32 lg:w-64">
-                        <Image
-                          src={partner.logo || "/placeholder.svg"}
-                          alt={partner.name}
-                          width={260}
-                          height={260}
-                          className="h-14 w-auto object-contain opacity-80 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:grayscale-0 md:h-16 lg:h-20"
-                        />
-                      </div>
-                      <span className="mt-2 text-xs text-muted-foreground">{partner.name}</span>
-                    </div>
-                  ))}
+      <section className="relative z-10 border-y border-border/50 bg-muted/30 px-6 py-16 md:px-8 lg:px-12 lg:py-20">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {stats.map((stat, index) => (
+              <AnimatedSection key={stat.label} delay={index * 100}>
+                <div className="text-center">
+                  <div className="mb-2 text-4xl font-bold text-foreground md:text-5xl">{stat.value}</div>
+                  <div className="text-sm font-medium text-muted-foreground md:text-base">{stat.label}</div>
                 </div>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="relative px-6 py-24 md:px-8 lg:px-12">
-        <div className="container mx-auto max-w-7xl">
-          <AnimatedSection>
-            <div className="mb-16 text-center">
-              <h2 className="mb-4 text-4xl font-bold md:text-5xl">Our Process</h2>
-              <p className="mx-auto max-w-2xl text-balance text-lg text-muted-foreground">
-                A proven methodology that delivers results every time
-              </p>
-            </div>
-          </AnimatedSection>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {processSteps.map((step, index) => (
-              <AnimatedSection key={step.number} delay={index * 100}>
-                <Card className="glass group relative h-full overflow-hidden border-border/50 p-6 transition-all duration-300 hover:scale-105 hover:border-primary/50">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-                  <div className="relative">
-                    <div className="mb-4 text-5xl font-bold text-glow opacity-20">{step.number}</div>
-                    <h3 className="mb-3 text-xl font-semibold">{step.title}</h3>
-                    <p className="text-sm text-muted-foreground">{step.description}</p>
-                  </div>
-                </Card>
               </AnimatedSection>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Video/Innovation Section */}
-      <section className="relative px-6 py-24 md:px-8 lg:px-12">
-        <div className="container mx-auto max-w-7xl">
+      {/* Featured Projects Section */}
+      <section className="relative z-10 px-6 py-20 md:px-8 lg:px-12 lg:py-28">
+        <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
-            <div className="glass neon-border-purple overflow-hidden rounded-3xl">
-              <div className="grid gap-8 md:grid-cols-2">
-                <div className="flex flex-col justify-center p-8 md:p-12">
-                  <h2 className="mb-4 text-3xl font-bold md:text-4xl">Innovation at Scale</h2>
-                  <p className="mb-6 text-balance text-muted-foreground">
-                    We combine cutting-edge AI technology with human creativity to deliver solutions that transform
-                    businesses and shape the future.
-                  </p>
-                  <div className="flex gap-4">
-                    <Button className="glow-purple">Learn More</Button>
-                    <Button variant="outline" className="glass bg-transparent">
-                      View Case Studies
-                    </Button>
-                  </div>
-                </div>
-                <div className="relative min-h-[300px] bg-gradient-to-br from-purple-500/20 to-pink-500/20 md:min-h-[400px]">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/20 backdrop-blur-sm">
-                      <div className="h-0 w-0 border-y-8 border-l-12 border-y-transparent border-l-primary" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="relative px-6 py-24 md:px-8 lg:px-12">
-        <div className="container mx-auto max-w-7xl">
-          <AnimatedSection>
-            <div className="mb-16 text-center">
-              <h2 className="mb-4 text-4xl font-bold md:text-5xl">What Our Clients Say</h2>
-              <p className="mx-auto max-w-2xl text-balance text-lg text-muted-foreground">
-                Don't just take our word for it - hear from the companies we've helped transform
-              </p>
-            </div>
-          </AnimatedSection>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {testimonials.map((testimonial, index) => (
-              <AnimatedSection key={testimonial.name} delay={index * 100}>
-                <Card className="glass group h-full border-border/50 p-6 transition-all duration-300 hover:scale-105 hover:border-primary/50">
-                  <div className="mb-4 flex gap-1">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={`${testimonial.name}-star-${i}`} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="mb-6 text-sm text-muted-foreground italic">"{testimonial.content}"</p>
-                  <div className="flex items-center gap-3">
-                    <Image
-                      src={testimonial.avatar || "/placeholder.svg"}
-                      alt={testimonial.name}
-                      width={48}
-                      height={48}
-                      className="h-12 w-12 rounded-full object-cover"
-                    />
-                    <div>
-                      <div className="font-semibold">{testimonial.name}</div>
-                      <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                    </div>
-                  </div>
-                </Card>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Latest Projects Preview Section */}
-      <section className="relative px-6 py-24 md:px-8 lg:px-12">
-        <div className="container mx-auto max-w-7xl">
-          <AnimatedSection>
-            <div className="mb-12 flex items-center justify-between">
+            <div className="mb-12 flex flex-col items-start justify-between gap-4 md:mb-16 md:flex-row md:items-center">
               <div>
-                <h2 className="mb-4 text-4xl font-bold md:text-5xl">Featured Projects</h2>
-                <p className="max-w-2xl text-balance text-lg text-muted-foreground">
-                  Explore our latest work and see how we're shaping the future
+                <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">Featured Projects</h2>
+                <p className="max-w-2xl text-lg text-muted-foreground">
+                  Explore our latest work and see how we're shaping the future of technology
                 </p>
               </div>
-              <Button variant="outline" className="glass hidden bg-transparent md:flex" asChild>
+              <Button variant="outline" className="hidden md:flex" asChild>
                 <Link href="/projects">
-                  View All
+                  View All Projects
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
           </AnimatedSection>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "AI E-Commerce Platform",
-                category: "AI & Machine Learning",
-                image: "/lyva.png",
-                url: "https://lyvaa.com/",
-              },
-              {
-                title: "Cloud Infrastructure",
-                category: "Cloud Solutions",
-                image: "/beingsmile.png",
-                url: "https://beingsmile.org/",
-              },
-              {
-                title: "FinTech Dashboard",
-                category: "Web Development",
-                image: "/tusqa.png",
-                url: "https://tusqawellbeing.com/",
-              },
-            ].map((project, index) => (
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {featuredProjects.map((project, index) => (
               <AnimatedSection key={project.title} delay={index * 100}>
-                <Link href={(project as any).url} target="_blank" rel="noopener noreferrer">
-                  <Card className="glass group relative h-full overflow-hidden border-border/50 transition-all duration-300 hover:scale-105 hover:border-primary/50">
-                    <div className="relative h-48 overflow-hidden">
+                <Link href={project.href}>
+                  <Card className="glass group h-full overflow-hidden border-border/50 transition-all duration-300 hover:border-primary/50 hover:shadow-lg">
+                    <div className="relative h-48 overflow-hidden bg-muted">
                       <Image
                         src={project.image || "/placeholder.svg"}
                         alt={project.title}
                         fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-110"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
                     </div>
                     <div className="p-6">
-                      <div className="mb-2 text-sm text-primary">{project.category}</div>
+                      <p className="mb-2 text-sm font-medium text-primary">{project.category}</p>
                       <h3 className="text-xl font-semibold">{project.title}</h3>
                     </div>
                   </Card>
@@ -428,7 +236,7 @@ export default function HomePage() {
 
           <AnimatedSection delay={300}>
             <div className="mt-8 text-center md:hidden">
-              <Button variant="outline" className="glass bg-transparent" asChild>
+              <Button variant="outline" asChild>
                 <Link href="/projects">
                   View All Projects
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -439,54 +247,111 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="relative px-6 py-24 md:px-8 lg:px-12">
-        <div className="container mx-auto max-w-7xl">
+      {/* Testimonials Section */}
+      <section className="relative z-10 border-y border-border/50 bg-muted/30 px-6 py-20 md:px-8 lg:px-12 lg:py-28">
+        <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
-            <div className="glass neon-border-purple rounded-3xl p-12 text-center">
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl">Stay Updated</h2>
-              <p className="mx-auto mb-8 max-w-2xl text-balance text-muted-foreground">
-                Subscribe to our newsletter for the latest insights on AI, cloud technology, and digital innovation
+            <div className="mb-12 text-center md:mb-16">
+              <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">Client Testimonials</h2>
+              <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                Don't just take our word for it - hear from the companies we've helped transform
               </p>
-              <form className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row">
-                <input
-                  suppressHydrationWarning
-                  type="email"
-                  placeholder="Enter your email"
-                  className="glass flex-1 rounded-lg border border-border/50 bg-background/50 px-4 py-3 text-sm outline-none transition-all focus:border-primary/50"
-                />
-                <Button type="submit" className="glow-purple">
-                  Subscribe
-                  <Send className="ml-2 h-4 w-4" />
-                </Button>
-              </form>
             </div>
           </AnimatedSection>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {testimonials.map((testimonial, index) => (
+              <AnimatedSection key={testimonial.name} delay={index * 100}>
+                <Card className="glass h-full border-border/50 p-6">
+                  <div className="mb-4 flex gap-1">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="mb-6 text-sm leading-relaxed text-muted-foreground italic">
+                    "{testimonial.content}"
+                  </p>
+                  <div>
+                    <div className="font-semibold text-foreground">{testimonial.name}</div>
+                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                  </div>
+                </Card>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="relative z-10 px-6 py-20 md:px-8 lg:px-12 lg:py-28">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <div className="mb-12 text-center md:mb-16">
+              <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">How We Work</h2>
+              <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                A proven methodology that delivers results every time
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                step: "01",
+                title: "Discovery",
+                description: "We analyze your needs and define project goals together.",
+              },
+              {
+                step: "02",
+                title: "Design",
+                description: "Creating intuitive solutions that align with your vision.",
+              },
+              {
+                step: "03",
+                title: "Development",
+                description: "Building robust, scalable systems with best practices.",
+              },
+              {
+                step: "04",
+                title: "Deployment",
+                description: "Launching your solution with ongoing support and optimization.",
+              },
+            ].map((item, index) => (
+              <AnimatedSection key={item.step} delay={index * 100}>
+                <div className="relative">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-lg font-bold text-primary">
+                    {item.step}
+                  </div>
+                  <h3 className="mb-2 text-xl font-semibold">{item.title}</h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="relative px-6 py-24 md:px-8 lg:px-12">
-        <div className="container mx-auto max-w-7xl">
+      <section className="relative z-10 px-6 py-20 md:px-8 lg:px-12 lg:py-28">
+        <div className="container mx-auto max-w-4xl">
           <AnimatedSection>
-            <div className="glass neon-border-magenta relative overflow-hidden rounded-3xl p-12 text-center md:p-16">
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 via-purple-500/10 to-cyan-500/10" />
-              <div className="relative">
-                <h2 className="mb-4 text-4xl font-bold md:text-5xl">Let's Build the Future Together</h2>
-                <p className="mx-auto mb-8 max-w-2xl text-balance text-lg text-muted-foreground">
-                  Ready to transform your business with cutting-edge AI and cloud solutions? Get in touch with our team
-                  today.
-                </p>
-                <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                  <Button size="lg" className="glow-magenta">
+            <Card className="glass border-border/50 p-8 text-center md:p-12">
+              <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">Ready to Get Started?</h2>
+              <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+                Let's discuss how we can help transform your business with cutting-edge technology solutions.
+              </p>
+              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <Button size="lg" className="glow-cyan" asChild>
+                  <Link href="/contact">
                     Start Your Project
-                  </Button>
-                  <Button size="lg" variant="outline" className="glass bg-transparent" asChild>
-                    <Link href="/contact">Contact Sales</Link>
-                  </Button>
-                </div>
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <Link href="/about">Learn More About Us</Link>
+                </Button>
               </div>
-            </div>
+            </Card>
           </AnimatedSection>
         </div>
       </section>

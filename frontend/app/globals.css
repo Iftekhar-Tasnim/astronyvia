@@ -188,4 +188,43 @@
   .typing-dots .dot { width: 5px; height: 5px; border-radius: 9999px; background: currentColor; opacity: .6; animation: typingBounce 1.2s infinite; }
   .typing-dots .dot:nth-child(2) { animation-delay: .15s; }
   .typing-dots .dot:nth-child(3) { animation-delay: .3s; }
+
+  /* Accordion animations */
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+  .animate-accordion-down {
+    animation: accordion-down 0.2s ease-out;
+  }
+  .animate-accordion-up {
+    animation: accordion-up 0.2s ease-out;
+  }
+
+  /* Navbar animations */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

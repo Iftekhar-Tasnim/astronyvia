@@ -11,6 +11,7 @@ import { AnimatedSection } from "@/components/animated-section"
 import { ParticleBackground } from "@/components/particle-background"
 import { Mail, MapPin, Phone, Send } from "lucide-react"
 import { Label } from "@/components/ui/label"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -30,8 +31,8 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email",
-      value: "contactus@astronyvia.com",
-      link: "mailto:contactus@astronyvia.com",
+      value: "info@astronyvia.com",
+      link: "mailto:info@astronyvia.com",
     },
     {
       icon: Phone,
@@ -41,8 +42,8 @@ export default function ContactPage() {
     },
     {
       icon: MapPin,
-      title: "Office",
-      value: "ECB Chattar, Dhaka, Bangladesh",
+      title: "Office Location",
+      value: "ECB Chattar, Dhaka-1212, Bangladesh",
       link: "https://www.google.com/maps/place/ECB+Chattar,+Dhaka/@23.8225706,90.3831293,15z/data=!3m1!4b1!4m6!3m5!1s0x3755c6c2ab936b87:0xcaa915c4069493be!8m2!3d23.8225517!4d90.3934291!16s%2Fg%2F11bztyyv98?entry=ttu&g_ep=EgoyMDI1MTAwNi4wIKXMDSoASAFQAw%3D%3D",
     },
   ]
@@ -56,9 +57,9 @@ export default function ContactPage() {
         <div className="container mx-auto max-w-7xl text-center">
           <AnimatedSection>
             <h1 className="mb-6 text-balance text-5xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
-              Get in{" "}
+              Contact{" "}
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Touch
+                Us
               </span>
             </h1>
           </AnimatedSection>
@@ -81,10 +82,10 @@ export default function ContactPage() {
                 <h2 className="mb-6 text-3xl font-bold">Send us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
+                    <Label htmlFor="name">Full Name</Label>
                     <Input
                       id="name"
-                      placeholder="Your name"
+                      placeholder="Enter your full name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="glass border-border/50"
@@ -93,11 +94,11 @@ export default function ContactPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
+                    <Label htmlFor="email">Email Address</Label>
                     <Input
                       id="email"
                       type="email"
-                      placeholder="your@email.com"
+                      placeholder="Enter your email address"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="glass border-border/50"
@@ -106,10 +107,10 @@ export default function ContactPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="company">Company</Label>
+                    <Label htmlFor="company">Company Name</Label>
                     <Input
                       id="company"
-                      placeholder="Your company name"
+                      placeholder="Enter your company name"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       className="glass border-border/50"
@@ -120,7 +121,7 @@ export default function ContactPage() {
                     <Label htmlFor="message">Message</Label>
                     <Textarea
                       id="message"
-                      placeholder="Tell us about your project..."
+                      placeholder="Please provide details about your project or inquiry"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="glass min-h-[150px] border-border/50"
@@ -239,7 +240,7 @@ export default function ContactPage() {
           <AnimatedSection>
             <div className="glass neon-border-magenta rounded-3xl p-8 md:p-12">
               <h2 className="mb-8 text-center text-3xl font-bold md:text-4xl">Frequently Asked Questions</h2>
-              <div className="grid gap-6 md:grid-cols-2">
+              <Accordion type="single" collapsible className="w-full space-y-4">
                 {[
                   {
                     q: "What is your typical project timeline?",
@@ -257,13 +258,13 @@ export default function ContactPage() {
                     q: "How do you ensure project success?",
                     a: "We follow agile methodologies with regular check-ins, transparent communication, and iterative development.",
                   },
-                ].map((faq) => (
-                  <div key={faq.q} className="space-y-2">
-                    <h3 className="font-semibold">{faq.q}</h3>
-                    <p className="text-sm text-muted-foreground">{faq.a}</p>
-                  </div>
+                ].map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="border-border/50 rounded-lg border px-4">
+                    <AccordionTrigger className="text-left">{faq.q}</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">{faq.a}</AccordionContent>
+                  </AccordionItem>
                 ))}
-              </div>
+              </Accordion>
             </div>
           </AnimatedSection>
         </div>

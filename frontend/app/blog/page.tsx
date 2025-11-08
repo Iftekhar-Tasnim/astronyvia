@@ -7,6 +7,7 @@ import { AnimatedSection } from "@/components/animated-section"
 import { ParticleBackground } from "@/components/particle-background"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
+import { FAQSection } from "@/components/faq-section"
 
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState("All")
@@ -222,6 +223,29 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection
+        faqs={[
+          {
+            q: "How often do you publish new blog posts?",
+            a: "We publish new articles regularly, typically 2-4 times per month, covering the latest trends in AI, web development, cloud technology, and industry insights.",
+          },
+          {
+            q: "Can I subscribe to your blog updates?",
+            a: "Yes! You can subscribe to our newsletter using the form above to receive the latest blog posts and insights directly in your inbox.",
+          },
+          {
+            q: "Do you accept guest posts?",
+            a: "We occasionally accept high-quality guest posts from industry experts. Please contact us with your proposal and writing samples.",
+          },
+          {
+            q: "What topics do you cover in your blog?",
+            a: "We cover a wide range of topics including AI and machine learning, web development, cloud architecture, design systems, industry trends, and technology best practices.",
+          },
+        ]}
+        className="relative"
+      />
 
       {/* Newsletter Section */}
       <section className="relative px-6 py-24 md:px-8 lg:px-12">

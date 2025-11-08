@@ -83,11 +83,11 @@ export function ChatAssistant() {
   return (
     <div className="fixed bottom-5 right-5 z-50">
       {!isOpen ? (
-        <Button aria-label="Open chat" className="glow-cyan rounded-full p-0 h-12 w-12" onClick={() => setIsOpen(true)}>
-          <MessageCircle className="h-5 w-5" />
+        <Button aria-label="Open chat" className="glow-cyan rounded-full p-0 h-16 w-16" onClick={() => setIsOpen(true)}>
+          <MessageCircle className="h-7 w-7" />
         </Button>
       ) : (
-        <div className="glass neon-border-cyan relative flex h-[420px] w-[340px] flex-col overflow-hidden rounded-2xl">
+        <div className="glass neon-border-cyan relative flex h-[420px] w-[340px] flex-col overflow-hidden rounded-2xl bg-background border border-border/50">
           <div className="flex items-center justify-between border-b px-4 py-2">
             <div className="text-sm font-semibold">Astronyvia Assist</div>
             <button aria-label="Close chat" onClick={() => setIsOpen(false)} className="opacity-70 hover:opacity-100">
